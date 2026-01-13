@@ -85,14 +85,14 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--wt_pdb", type=str, required=False,
-                        default='/scratch/jgray21/zyhuggan/Ortho_BB/structures/3mjgwt_ABY.pdb')
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/3mjgwt_ABY.pdb')
     parser.add_argument("--ortho_pdb", type=str, required=False,
-                        default='/scratch/jgray21/zyhuggan/Ortho_BB/structures/3mjgortho_ABY.pdb')
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/3mjgortho_ABY.pdb')
     parser.add_argument("--out_wt", type=str, required=False,
-                        default='/scratch/jgray21/zyhuggan/Ortho_BB/structures/5repeats_5_wt',
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/5repeats_5_wt',
                         help="Output dir for WT")
     parser.add_argument("--out_ortho", type=str, required=False,
-                        default='/scratch/jgray21/zyhuggan/Ortho_BB/structures/5repeats_5_ortho',
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/5repeats_5_ortho',
                         help="Output dir for Ortho")
     parser.add_argument("--nstruct", type=int, default=5,
                         help="Number of relax runs per structure")
