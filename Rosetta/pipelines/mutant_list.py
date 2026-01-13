@@ -43,4 +43,4 @@ print(tasks)
 df = pd.DataFrame(tasks, columns=["pdb_pos", "mut_aa"])
 
 
-df.to_csv("/weka/scratch/jgray21/zyhuggan/for_zy/csv_files/updatedmutant_list.csv", index=False)
+df.to_csv("/weka/scratch/jgray21/zyhuggan/for_zy/csv_files/mutant_list.csv", index=False)

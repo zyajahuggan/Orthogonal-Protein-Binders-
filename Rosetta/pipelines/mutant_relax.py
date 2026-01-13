@@ -202,9 +202,9 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_pdb", type=str,
-                        default='/scratch/jgray21/zyhuggan/Ortho_BB/structures/5repeats_5_wt/relaxed_wt_1.pdb')
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/5repeats_5_wt/relaxed_wt_1.pdb') #average pdb 
     parser.add_argument("--in_csv", type=str,
-                        default='/scratch/jgray21/zyhuggan/Ortho_BB/csv_files/mutant_list.csv')
+                        default='/scratch4/jgray21/zhuggan/Orthogonal-Protein-Binders-/csv_files/mutant_list.csv')
     parser.add_argument("--out_dir", type=str, default="/scratch/jgray21/zyhuggan/Ortho_BB/output_pdbs/relaxed_wt_1pdbs" ,help="Output directory.")
     parser.add_argument("--nstruct", type=int, default=5,help="Number of relax runs per structure")
     parser.add_argument("--debug", action="store_true", help="Show full traceback on error (for debugging)")
