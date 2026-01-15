@@ -145,8 +145,8 @@ def main(pdb_dir, wt_pdb, monomer_chain, out_sc):
 # -----------------------------
 if __name__ == "__main__":
     main(
-        pdb_dir="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/output_pdbs/relaxed_wt_1_receptor_5repeats_pdbs",
-        wt_pdb="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/structures/relaxed_wt_1.pdb",
+        pdb_dir="/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/output/relaxed_wt_1_receptor_5repeats_pdbs",
+        wt_pdb="//scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/input/relaxed_wt_1.pdb",
         monomer_chain="Y",
         out_sc="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/score_files/relaxed_wt_1_receptor.sc"
     )
