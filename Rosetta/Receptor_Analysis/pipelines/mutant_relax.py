@@ -160,10 +160,10 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_pdb", type=str,
-                        default='/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/structures/relaxed_wt_1.pdb')
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/input/relaxed_wt_1.pdb')
     parser.add_argument("--in_csv", type=str,
-                        default='/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/pipelines/receptor_mutant_list.csv')
-    parser.add_argument("--out_dir", type=str, default="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/output_pdbs/relaxed_wt_1_receptor_5repeats_pdbs" ,help="Output directory.")
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/pipelines/receptor_mutant_list.csv')
+    parser.add_argument("--out_dir", type=str, default="/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/output/relaxed_wt_1_receptor_5repeats_pdbs" ,help="Output directory.")
     parser.add_argument("--nstruct", type=int, default=5,help="Number of relax runs per structure")
     parser.add_argument("--debug", action="store_true", help="Show full traceback on error (for debugging)")
     args = parser.parse_args()
