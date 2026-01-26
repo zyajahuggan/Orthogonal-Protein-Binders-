@@ -30,8 +30,7 @@
                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
                 <Chain number="3" chi="true" bb="true" /> <!-- chain Y (Receptor) -->
-                <Chain number="4" chi="true" bb="true" /> <!-- chain X (Receptor) -->
-                <Jump number="1" setting="true" /> <!-- Jump between A/B and X-->
+                <Jump number="1" setting="true" /> <!-- Jump between A/B -->
                 <Jump number="2" setting="true" /> <!-- Jump between A/B and Y -->
             </MoveMap>
         </FastRelax>
