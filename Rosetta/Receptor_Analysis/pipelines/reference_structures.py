@@ -30,37 +30,51 @@ def configure_logging(level=logging.DEBUG):
         logging.getLogger(noisy).setLevel(logging.WARNING)
 
 # ---------------- Globals in workers ----------------
+GLOBAL_SCOREFXN = None
+GLOBAL_WT_POSE = None
+GLOBAL_ORTHO_POSE = None
 GLOBAL_FRELAX = None
 GLOBAL_IAM = None
 
-def init_worker(xml_file):
-    """Initialize PyRosetta and load movers once per worker."""
-    pyrosetta.init("-mute all", silent=True)
 
-    global GLOBAL_FRELAX, GLOBAL_IAM
+def init_worker(wt_pdb, ortho_pdb, xml_file="./reference_structures.xml"):
+    """Initialize PyRosetta and load common poses once per worker."""
+    pyrosetta.init("-mute all", silent=True)
+    global GLOBAL_SCOREFXN, GLOBAL_WT_POSE, GLOBAL_ORTHO_POSE, GLOBAL_FRELAX, GLOBAL_IAM
+
+    GLOBAL_SCOREFXN = pyrosetta.rosetta.core.scoring.get_score_function(True)
+
+    # Load poses once
+    GLOBAL_WT_POSE = pyrosetta.io.pose_from_pdb(wt_pdb)
+    GLOBAL_ORTHO_POSE = pyrosetta.io.pose_from_pdb(ortho_pdb)
+
+    # Load relax mover once
     xmlobj = XmlObjects.create_from_file(xml_file)
     GLOBAL_FRELAX = xmlobj.get_mover("FastRelax")
-    # if you don’t actually want InterfaceAnalyzer, comment next line
     GLOBAL_IAM = xmlobj.get_mover("analyze_interface")
 
-    logger.debug("Worker initialized")
+
+    logger.debug("Worker initialized with WT + Ortho poses")
 
 # ---------------- Job runner ----------------
 def run_relax_job(job):
-    pdb_in, pdb_out = job
-    logger.info(f"Running Relax on {pdb_in}")
-
-    pose = pyrosetta.io.pose_from_pdb(pdb_in)
-
-    # Apply FastRelax
+    pdb_type, out_path = job  # "wt" or "ortho"
+    logger.debug("Cloning poses")
+    if pdb_type == "wt":
+        pose = GLOBAL_WT_POSE.clone()
+    elif pdb_type == "ortho":
+        pose = GLOBAL_ORTHO_POSE.clone()
+    else:
+        raise ValueError(f"Unknown job type: {pdb_type}")
+    logger.debug("Applying Relax...")
     GLOBAL_FRELAX.apply(pose)
 
-    # Optional: InterfaceAnalyzerMover
-    if GLOBAL_IAM is not None:
-        GLOBAL_IAM.apply(pose)
+    logger.debug("Applying InterfaceAnalyzer...")
+    GLOBAL_IAM.apply(pose)
 
-    pose.dump_pdb(pdb_out)
-    return pdb_out
+    logger.debug("Done...Dumping Now")
+    pose.dump_pdb(out_path)
+    return out_path
 
 # ---------------- Helpers ----------------
 def get_max_workers():
@@ -70,74 +84,41 @@ def get_max_workers():
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-
-    parser.add_argument(
-        "--input_root",
-        type=str,
-        default="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/fullpdgf",
-        help="Root folder containing Design_1, Design_2, ..."
-    )
-    parser.add_argument(
-        "--output_root",
-        type=str,
-        default="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/fullpdgf",
-        help="Root folder where relaxed structures go"
-    )
-    parser.add_argument(
-        "--xml",
-        type=str,
-        default="/scratch4/jgray21/zhuggan1/projects/orthosystems/Receptor_Analysis/pipelines/reference_structures.xml",
-        help="RosettaScripts XML file with FastRelax & analyze_interface"
-    )
-    parser.add_argument(
-        "--nstruct",
-        type=int,
-        default=1,   # <-- only once per PDB
-        help="How many relax repeats per PDB"
-    )
-    parser.add_argument(
-        "--workers",
-        type=int,
-        default=get_max_workers()
-    )
+    parser.add_argument("--wt_pdb", type=str, required=False,
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/3mjgwt_ABY.pdb')
+    parser.add_argument("--ortho_pdb", type=str, required=False,
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/3mjgortho_ABY.pdb')
+    parser.add_argument("--out_wt", type=str, required=False,
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt',
+                        help="Output dir for WT")
+    parser.add_argument("--out_ortho", type=str, required=False,
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_ortho',
+                        help="Output dir for Ortho")
+    parser.add_argument("--nstruct", type=int, default=5,
+                        help="Number of relax runs per structure")
+    parser.add_argument("--workers", type=int, default=get_max_workers(),
+                        help="Number of processes (default = all allocated CPUs)")
     parser.add_argument("--debug", action="store_true")
-
     args = parser.parse_args()
+
     configure_logging(logging.DEBUG if args.debug else logging.INFO)
 
-    # Make sure output_root exists
-    os.makedirs(args.output_root, exist_ok=True)
+    # Ensure output dirs exist
+    os.makedirs(args.out_wt, exist_ok=True)
+    os.makedirs(args.out_ortho, exist_ok=True)
 
-    # ---- Build job list by scanning the structure tree ----
+    # Build job list
     jobs = []
+    for i in range(1, args.nstruct + 1):
+        jobs.append(("wt", os.path.join(args.out_wt, f"relaxed_wt_{i}.pdb")))
+        jobs.append(("ortho", os.path.join(args.out_ortho, f"relaxed_ortho_{i}.pdb")))
 
-    for root, dirs, files in os.walk(args.input_root):
-        for f in files:
-            if not f.endswith(".pdb"):
-                continue
-
-            full_in = os.path.join(root, f)
-
-            # Mirror folder structure under output_root
-            relative = os.path.relpath(root, args.input_root)
-            out_dir = os.path.join(args.output_root, relative)
-            os.makedirs(out_dir, exist_ok=True)
-
-            for i in range(1, args.nstruct + 1):
-                out_name = f"{os.path.splitext(f)[0]}_relaxed_{i:03d}.pdb"
-                full_out = os.path.join(out_dir, out_name)
-                jobs.append((full_in, full_out))
-
-    logger.info(f"Total jobs: {len(jobs)}")
-
-    # ---- Run jobs in parallel ----
-    with Pool(
-        processes=args.workers,
-        initializer=init_worker,
-        initargs=(args.xml,)
-    ) as pool:
-        for out_file in pool.imap_unordered(run_relax_job, jobs):
-            logger.info(f"Finished {out_file}")
+    # Run in parallel
+    with Pool(processes=args.workers,
+              initializer=init_worker,
+              initargs=(args.wt_pdb, args.ortho_pdb)) as pool:
+        for out in pool.imap_unordered(run_relax_job, jobs):
+            logger.info(f"Finished {out}")
 
 if __name__ == "__main__":
     main()
