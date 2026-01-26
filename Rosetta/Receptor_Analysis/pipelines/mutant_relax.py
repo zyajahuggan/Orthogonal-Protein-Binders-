@@ -160,7 +160,7 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_pdb", type=str,
-                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/input/relaxed_wt_1.pdb')
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_wt_1.pdb')
     parser.add_argument("--in_csv", type=str,
                         default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/pipelines/receptor_mutant_list.csv')
     parser.add_argument("--out_dir", type=str, default="/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Receptor_Analysis/output/relaxed_wt_1_receptor_5repeats_pdbs" ,help="Output directory.")

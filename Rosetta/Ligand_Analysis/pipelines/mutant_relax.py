@@ -125,49 +125,7 @@ class Mutator:
             f.write(f"\n{remarks_str}")
         self.pose.dump_pdb(out_path)
         logger.info(f"Output: {os.path.basename(out_path)}")
-    '''
-    def mutate_relax_analyze(self, out_path: str, n_relax: int = 5):
-        """Mutate, then run multiple relax/analyze cycles and save outputs."""
-        self.apply_mutation()
-        mover = self.frel_xml_obj or self.setup_frelax()
-        logger.debug(f"Applying fastrelax to input: {os.path.basename(self.pose.pdb_info().name())} -> {os.path.basename(out_path)}")
-        inta  = self.int_analyzer or self.setup_analyzer()
-        logger.debug(f"Applying the interface analyzer to input: {os.path.basename(self.pose.pdb_info().name())} -> {os.path.basename(out_path)}")
-        all_scores = []
-        base_name = os.path.splitext(out_path)[0]
 
-        for i in range(n_relax):
-            pose_copy = self.pose.clone()
-
-            # Apply FastRelax
-            mover.apply(pose_copy)
-
-            # Analyze interface
-            inta.apply(pose_copy)
-
-            score = pyrosetta.get_fa_scorefxn()(pose_copy)
-            all_scores.append(score)
-
-            # Save each relaxed replicate as its own file
-            rep_out = f"{base_name}_relax{i+1}.pdb"
-            final_remarks = [
-                "UNSAT HBOND PYMOL SELECTION", str(inta.get_pymol_sel_hbond_unsat()), 
-                "INTERFACE PYMOL SELECTION", str(inta.get_pymol_sel_interface()),
-                "TOTAL SCORE", str(score)
-            ]
-            with open(rep_out, 'a') as f:
-                f.write("\n".join(final_remarks) + "\n")
-            pose_copy.dump_pdb(rep_out)
-            logger.info(f"Output replicate: {os.path.basename(rep_out)}")
-
-        # Write summary file with average
-        avg_score = sum(all_scores) / len(all_scores)
-        summary_out = f"{base_name}_summary.txt"
-        with open(summary_out, 'w') as f:
-            f.write("Scores:\n" + "\n".join(map(str, all_scores)) + "\n")
-            f.write(f"Average Score: {avg_score}\n")
-        logger.info(f"Averaged score written to {summary_out}")
-    '''
 def safe_runner(job_tuple):
     input_pdb_path, chain_id_idx_pdb, mut_aa, out_pdb_path = job_tuple
     try:
@@ -204,8 +162,8 @@ def parse_args():
     parser.add_argument("--in_pdb", type=str,
                         default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/5repeats_5_wt/relaxed_wt_1.pdb') #average pdb 
     parser.add_argument("--in_csv", type=str,
-                        default='/scratch4/jgray21/zhuggan/Orthogonal-Protein-Binders-/csv_files/mutant_list.csv')
-    parser.add_argument("--out_dir", type=str, default="/scratch/jgray21/zyhuggan/Ortho_BB/output_pdbs/relaxed_wt_1pdbs" ,help="Output directory.")
+                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_list.csv')
+    parser.add_argument("--out_dir", type=str, default="/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/output/relaxed_wt_1pdbs" ,help="Output directory.")
     parser.add_argument("--nstruct", type=int, default=5,help="Number of relax runs per structure")
     parser.add_argument("--debug", action="store_true", help="Show full traceback on error (for debugging)")
     args = parser.parse_args()
