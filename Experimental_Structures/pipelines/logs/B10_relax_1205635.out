@@ -1,0 +1,59 @@
+Using existing logs directory.
+[DEBUG] Creating jobs for bundle: [('A 27', 'R'), ('A 31', 'D'), ('A 34', 'N'), ('A 36', 'N'), ('A 73', 'R'), ('B 54', 'N'), ('B 57', 'N')]
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/ortho/experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep1.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/ortho/experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep2.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/ortho/experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep3.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/ortho/experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep4.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/ortho/experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep5.pdb
+2026-03-25 11:53:00 EDT MainProcess INFO [__main__] Processing a total of 5 jobs
+2026-03-25 11:53:00 EDT MainProcess INFO [__main__] Starting pool with 5 worker(s)
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A27
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A73
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at B54
+2026-03-25 11:53:05 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at B57
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A27
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A73
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at B54
+2026-03-25 11:53:05 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at B57
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A27
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A73
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at B54
+2026-03-25 11:53:05 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at B57
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A27
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A73
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at B54
+2026-03-25 11:53:05 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at B57
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A27
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A73
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at B54
+2026-03-25 11:53:05 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at B57
+2026-03-25 11:53:10 EDT ForkPoolWorker-2 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-25 11:53:10 EDT ForkPoolWorker-2 DEBUG [__main__] This is the number of repeats 5
+2026-03-25 11:53:10 EDT ForkPoolWorker-2 DEBUG [__main__] Applying fastrelax to input: relaxed_ortho_3.pdb -> experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep3.pdb
+2026-03-25 11:53:10 EDT ForkPoolWorker-1 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-25 11:53:10 EDT ForkPoolWorker-1 DEBUG [__main__] This is the number of repeats 5
+2026-03-25 11:53:10 EDT ForkPoolWorker-1 DEBUG [__main__] Applying fastrelax to input: relaxed_ortho_3.pdb -> experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep2.pdb
+2026-03-25 11:53:11 EDT ForkPoolWorker-3 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-25 11:53:11 EDT ForkPoolWorker-3 DEBUG [__main__] This is the number of repeats 5
+2026-03-25 11:53:11 EDT ForkPoolWorker-3 DEBUG [__main__] Applying fastrelax to input: relaxed_ortho_3.pdb -> experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep5.pdb
+2026-03-25 11:53:11 EDT ForkPoolWorker-5 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-25 11:53:11 EDT ForkPoolWorker-5 DEBUG [__main__] This is the number of repeats 5
+2026-03-25 11:53:11 EDT ForkPoolWorker-5 DEBUG [__main__] Applying fastrelax to input: relaxed_ortho_3.pdb -> experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep4.pdb
+2026-03-25 11:53:12 EDT ForkPoolWorker-4 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-25 11:53:12 EDT ForkPoolWorker-4 DEBUG [__main__] This is the number of repeats 5
+2026-03-25 11:53:12 EDT ForkPoolWorker-4 DEBUG [__main__] Applying fastrelax to input: relaxed_ortho_3.pdb -> experi_relaxed_ortho_3_A27R_A31D_A34N_A36N_A73R_B54N_B57N_rep1.pdb
