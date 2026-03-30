@@ -154,13 +154,13 @@ def safe_runner(job_tuple):
 def job_list_creator(args):
     # --- Use this directly ---
     mutation_bundle = [
-        ("A 27", "H"),
-        ("A 31", "C"),
-        ("A 34", "S"),
-        ("A 36", "V"),
-        ("A 73", "W"),
-        ("B 54", "R"),
-        ("B 57", "S"),
+        ("A 27", "G"),
+        ("A 31", "R"),
+        ("A 34", "R"),
+        ("A 36", "I"),
+        ("A 73", "F"),
+        ("B 54", "K"),
+        ("B 57", "T"),
     ]
 
     os.makedirs(args.out_dir, exist_ok=True)

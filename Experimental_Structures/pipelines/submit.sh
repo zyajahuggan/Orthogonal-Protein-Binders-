@@ -2,7 +2,7 @@
 
 #SBATCH --account=jgray21
 #SBATCH --partition=cpu
-#SBATCH --job-name=B1_relax_wt
+#SBATCH --job-name=E4_relax_wtnew
 #SBATCH --nodes=1     
 #SBATCH --ntasks=1                   
 #SBATCH --cpus-per-task=5  # adjust to max   
