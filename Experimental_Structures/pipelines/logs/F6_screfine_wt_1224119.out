@@ -1,0 +1,75 @@
+Using existing logs directory.
+[DEBUG] Creating jobs for bundle: [('A 27', 'K'), ('A 31', 'D'), ('A 34', 'N'), ('A 36', 'N'), ('A 73', 'L'), ('B 54', 'G'), ('B 57', 'Q')]
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/sc_refine_wt/experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep1.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/sc_refine_wt/experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep2.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/sc_refine_wt/experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep3.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/sc_refine_wt/experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep4.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/sc_refine_wt/experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep5.pdb
+2026-03-30 17:54:45 EDT MainProcess INFO [__main__] Processing a total of 5 jobs
+2026-03-30 17:54:45 EDT MainProcess INFO [__main__] Starting pool with 5 worker(s)
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->K
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->K
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->K
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->K
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->K
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->L
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->L
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->L
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->L
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A31
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A34
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Skipping WT->WT mutation at A36
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->L
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->G
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->G
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->G
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->G
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->G
+2026-03-30 17:54:47 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->Q
+2026-03-30 17:54:47 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->Q
+2026-03-30 17:54:47 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->Q
+2026-03-30 17:54:47 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->Q
+2026-03-30 17:54:47 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->Q
+2026-03-30 17:54:51 EDT ForkPoolWorker-2 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-30 17:54:51 EDT ForkPoolWorker-2 DEBUG [__main__] This is the number of repeats 5
+2026-03-30 17:54:51 EDT ForkPoolWorker-2 DEBUG [__main__] Applying fastrelax to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep1.pdb
+2026-03-30 17:54:51 EDT ForkPoolWorker-1 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-30 17:54:51 EDT ForkPoolWorker-1 DEBUG [__main__] This is the number of repeats 5
+2026-03-30 17:54:51 EDT ForkPoolWorker-1 DEBUG [__main__] Applying fastrelax to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep4.pdb
+2026-03-30 17:54:51 EDT ForkPoolWorker-3 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-30 17:54:51 EDT ForkPoolWorker-3 DEBUG [__main__] This is the number of repeats 5
+2026-03-30 17:54:51 EDT ForkPoolWorker-3 DEBUG [__main__] Applying fastrelax to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep5.pdb
+2026-03-30 17:54:51 EDT ForkPoolWorker-5 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-30 17:54:51 EDT ForkPoolWorker-5 DEBUG [__main__] This is the number of repeats 5
+2026-03-30 17:54:51 EDT ForkPoolWorker-5 DEBUG [__main__] Applying fastrelax to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep2.pdb
+2026-03-30 17:54:51 EDT ForkPoolWorker-4 DEBUG [__main__] Successfully setup the FastRelax
+2026-03-30 17:54:51 EDT ForkPoolWorker-4 DEBUG [__main__] This is the number of repeats 5
+2026-03-30 17:54:51 EDT ForkPoolWorker-4 DEBUG [__main__] Applying fastrelax to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep3.pdb
+2026-03-30 17:56:13 EDT ForkPoolWorker-1 DEBUG [__main__] Successfully setup the InterfaceAnalyzerMover
+2026-03-30 17:56:13 EDT ForkPoolWorker-1 DEBUG [__main__] Applying the interface analyzer to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep4.pdb
+2026-03-30 17:56:13 EDT ForkPoolWorker-3 DEBUG [__main__] Successfully setup the InterfaceAnalyzerMover
+2026-03-30 17:56:13 EDT ForkPoolWorker-3 DEBUG [__main__] Applying the interface analyzer to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep5.pdb
+2026-03-30 17:56:13 EDT ForkPoolWorker-4 DEBUG [__main__] Successfully setup the InterfaceAnalyzerMover
+2026-03-30 17:56:13 EDT ForkPoolWorker-4 DEBUG [__main__] Applying the interface analyzer to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep3.pdb
+2026-03-30 17:56:13 EDT ForkPoolWorker-5 DEBUG [__main__] Successfully setup the InterfaceAnalyzerMover
+2026-03-30 17:56:13 EDT ForkPoolWorker-5 DEBUG [__main__] Applying the interface analyzer to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep2.pdb
+2026-03-30 17:56:13 EDT ForkPoolWorker-2 DEBUG [__main__] Successfully setup the InterfaceAnalyzerMover
+2026-03-30 17:56:13 EDT ForkPoolWorker-2 DEBUG [__main__] Applying the interface analyzer to input: relaxed_wt_1.pdb -> experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep1.pdb
+2026-03-30 17:56:15 EDT ForkPoolWorker-1 INFO [__main__] Output: experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep4.pdb
+2026-03-30 17:56:16 EDT ForkPoolWorker-3 INFO [__main__] Output: experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep5.pdb
+2026-03-30 17:56:16 EDT ForkPoolWorker-4 INFO [__main__] Output: experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep3.pdb
+2026-03-30 17:56:16 EDT ForkPoolWorker-5 INFO [__main__] Output: experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep2.pdb
+2026-03-30 17:56:16 EDT ForkPoolWorker-2 INFO [__main__] Output: experi_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54G_B57Q_rep1.pdb
+2026-03-30 17:56:16 EDT MainProcess INFO [__main__] Script execution completed

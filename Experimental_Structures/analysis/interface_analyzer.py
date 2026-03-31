@@ -146,8 +146,8 @@ def main(pdb_dir, wt_pdb, monomer_chain, out_sc):
 # -----------------------------
 if __name__ == "__main__":
     main(
-        pdb_dir="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/wt",
-        wt_pdb="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_wt_1.pdb",
+        pdb_dir="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/ligand_bbsc_relax_ortho",
+        wt_pdb="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_ortho/relaxed_ortho_3.pdb",
         monomer_chain="Y",
-        out_sc="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/score_files/experi_relaxed_wt_1.sc"
+        out_sc="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/score_files/ligand_bbsc_relaxed_ortho_3.sc"
     )

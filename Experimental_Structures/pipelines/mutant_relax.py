@@ -154,13 +154,13 @@ def safe_runner(job_tuple):
 def job_list_creator(args):
     # --- Use this directly ---
     mutation_bundle = [
-        ("A 27", "G"),
-        ("A 31", "R"),
-        ("A 34", "R"),
-        ("A 36", "I"),
-        ("A 73", "F"),
-        ("B 54", "K"),
-        ("B 57", "T"),
+        ("A 27", "S"),
+        ("A 31", "G"),
+        ("A 34", "L"),
+        ("A 36", "S"),
+        ("A 73", "L"),
+        ("B 54", "A"),
+        ("B 57", "L"),
     ]
 
     os.makedirs(args.out_dir, exist_ok=True)
@@ -193,7 +193,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_pdb", type=str,
                         default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_wt_1.pdb') #average pdb 
-    parser.add_argument("--out_dir", type=str, default="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/wt" ,help="Output directory.")
+    parser.add_argument("--out_dir", type=str, default="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/sc_refine_wt" ,help="Output directory.")
     parser.add_argument("--nstruct", type=int, default=5,help="Number of structures")
     parser.add_argument("--debug", action="store_true", help="Show full traceback on error (for debugging)")
     args = parser.parse_args()

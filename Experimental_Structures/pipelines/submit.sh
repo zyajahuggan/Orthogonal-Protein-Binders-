@@ -2,7 +2,7 @@
 
 #SBATCH --account=jgray21
 #SBATCH --partition=cpu
-#SBATCH --job-name=E4_relax_wtnew
+#SBATCH --job-name=B12_screfine_wt
 #SBATCH --nodes=1     
 #SBATCH --ntasks=1                   
 #SBATCH --cpus-per-task=5  # adjust to max   

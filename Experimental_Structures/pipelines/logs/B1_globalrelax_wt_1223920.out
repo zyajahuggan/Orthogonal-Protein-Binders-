@@ -1,0 +1,325 @@
+Using existing logs directory.
+[DEBUG] Creating jobs for bundle: [('A 27', 'H'), ('A 31', 'C'), ('A 34', 'S'), ('A 36', 'V'), ('A 73', 'W'), ('B 54', 'R'), ('B 57', 'S')]
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep1.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep2.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep3.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep4.pdb
+[DEBUG] Output file: /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep5.pdb
+2026-03-30 16:22:01 EDT MainProcess INFO [__main__] Processing a total of 5 jobs
+2026-03-30 16:22:01 EDT MainProcess INFO [__main__] Starting pool with 5 worker(s)
+2026-03-30 16:22:03 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->H
+2026-03-30 16:22:03 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->H
+2026-03-30 16:22:03 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->H
+2026-03-30 16:22:03 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->H
+2026-03-30 16:22:03 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 27 at chain A (Rosetta 22) R->H
+2026-03-30 16:22:04 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 31 at chain A (Rosetta 26) D->C
+2026-03-30 16:22:04 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 31 at chain A (Rosetta 26) D->C
+2026-03-30 16:22:04 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 31 at chain A (Rosetta 26) D->C
+2026-03-30 16:22:04 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 31 at chain A (Rosetta 26) D->C
+2026-03-30 16:22:04 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 31 at chain A (Rosetta 26) D->C
+2026-03-30 16:22:04 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 34 at chain A (Rosetta 29) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 34 at chain A (Rosetta 29) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 34 at chain A (Rosetta 29) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 34 at chain A (Rosetta 29) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 34 at chain A (Rosetta 29) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 36 at chain A (Rosetta 31) N->V
+2026-03-30 16:22:04 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 36 at chain A (Rosetta 31) N->V
+2026-03-30 16:22:04 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 36 at chain A (Rosetta 31) N->V
+2026-03-30 16:22:04 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 36 at chain A (Rosetta 31) N->V
+2026-03-30 16:22:04 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 36 at chain A (Rosetta 31) N->V
+2026-03-30 16:22:04 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->W
+2026-03-30 16:22:04 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->W
+2026-03-30 16:22:04 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->W
+2026-03-30 16:22:04 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->W
+2026-03-30 16:22:04 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 73 at chain A (Rosetta 68) R->W
+2026-03-30 16:22:04 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->R
+2026-03-30 16:22:04 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->R
+2026-03-30 16:22:04 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->R
+2026-03-30 16:22:04 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->R
+2026-03-30 16:22:04 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 54 at chain B (Rosetta 146) N->R
+2026-03-30 16:22:04 EDT ForkPoolWorker-3 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-2 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-4 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-5 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->S
+2026-03-30 16:22:04 EDT ForkPoolWorker-1 DEBUG [__main__] Mutating PDB idx 57 at chain B (Rosetta 149) N->S
+2026-03-30 16:22:07 EDT ForkPoolWorker-2 ERROR [__main__] Failed trying to generate /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep3.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/protocols/rosetta_scripts/RosettaScriptsParser.cc:1217
+Input rosetta scripts XML file "./mutant_relax.xml" failed to validate against the rosetta scripts schema. Use the option -parser::output_schema <output filename> to output the schema to a file to see all valid options.
+Your XML has failed validation.  The error message below will tell you where in your XML file the error occurred.  Here's how to fix it:
+
+1) If the validation fails on something obvious, like an illegal attribute due to a spelling error (perhaps you used scorefnction instead of scorefunction), then you need to fix your XML file.
+2) If you haven't run the XML rewriter script and this might be pre-2017 Rosetta XML, run the rewriter script (tools/xsd_xrw/rewrite_rosetta_script.py) on your input XML first.  The attribute values not being in quotes (scorefunction=talaris2014 instead of scorefunction="talaris2014") is a good indicator that this is your problem.
+3) If you are a developer and neither 1 nor 2 worked - email the developer's mailing list or try Slack.
+4) If you are an academic or commercial user - try the Rosetta Forums https://www.rosettacommons.org/forum
+
+
+Error messages were:
+Error: Unescaped '<' not allowed in attributes values
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: attributes construct error
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: Couldn't find end of Start Tag Chain line 36
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+------------------------------------------------------------
+Warning messages were:
+------------------------------------------------------------
+
+2026-03-30 16:22:07 EDT ForkPoolWorker-3 ERROR [__main__] Failed trying to generate /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep5.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/protocols/rosetta_scripts/RosettaScriptsParser.cc:1217
+Input rosetta scripts XML file "./mutant_relax.xml" failed to validate against the rosetta scripts schema. Use the option -parser::output_schema <output filename> to output the schema to a file to see all valid options.
+Your XML has failed validation.  The error message below will tell you where in your XML file the error occurred.  Here's how to fix it:
+
+1) If the validation fails on something obvious, like an illegal attribute due to a spelling error (perhaps you used scorefnction instead of scorefunction), then you need to fix your XML file.
+2) If you haven't run the XML rewriter script and this might be pre-2017 Rosetta XML, run the rewriter script (tools/xsd_xrw/rewrite_rosetta_script.py) on your input XML first.  The attribute values not being in quotes (scorefunction=talaris2014 instead of scorefunction="talaris2014") is a good indicator that this is your problem.
+3) If you are a developer and neither 1 nor 2 worked - email the developer's mailing list or try Slack.
+4) If you are an academic or commercial user - try the Rosetta Forums https://www.rosettacommons.org/forum
+
+
+Error messages were:
+Error: Unescaped '<' not allowed in attributes values
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: attributes construct error
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: Couldn't find end of Start Tag Chain line 36
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+------------------------------------------------------------
+Warning messages were:
+------------------------------------------------------------
+
+2026-03-30 16:22:07 EDT ForkPoolWorker-1 ERROR [__main__] Failed trying to generate /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep1.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/protocols/rosetta_scripts/RosettaScriptsParser.cc:1217
+Input rosetta scripts XML file "./mutant_relax.xml" failed to validate against the rosetta scripts schema. Use the option -parser::output_schema <output filename> to output the schema to a file to see all valid options.
+Your XML has failed validation.  The error message below will tell you where in your XML file the error occurred.  Here's how to fix it:
+
+1) If the validation fails on something obvious, like an illegal attribute due to a spelling error (perhaps you used scorefnction instead of scorefunction), then you need to fix your XML file.
+2) If you haven't run the XML rewriter script and this might be pre-2017 Rosetta XML, run the rewriter script (tools/xsd_xrw/rewrite_rosetta_script.py) on your input XML first.  The attribute values not being in quotes (scorefunction=talaris2014 instead of scorefunction="talaris2014") is a good indicator that this is your problem.
+3) If you are a developer and neither 1 nor 2 worked - email the developer's mailing list or try Slack.
+4) If you are an academic or commercial user - try the Rosetta Forums https://www.rosettacommons.org/forum
+
+
+Error messages were:
+Error: Unescaped '<' not allowed in attributes values
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: attributes construct error
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: Couldn't find end of Start Tag Chain line 36
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+------------------------------------------------------------
+Warning messages were:
+------------------------------------------------------------
+
+2026-03-30 16:22:07 EDT ForkPoolWorker-5 ERROR [__main__] Failed trying to generate /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep4.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/protocols/rosetta_scripts/RosettaScriptsParser.cc:1217
+Input rosetta scripts XML file "./mutant_relax.xml" failed to validate against the rosetta scripts schema. Use the option -parser::output_schema <output filename> to output the schema to a file to see all valid options.
+Your XML has failed validation.  The error message below will tell you where in your XML file the error occurred.  Here's how to fix it:
+
+1) If the validation fails on something obvious, like an illegal attribute due to a spelling error (perhaps you used scorefnction instead of scorefunction), then you need to fix your XML file.
+2) If you haven't run the XML rewriter script and this might be pre-2017 Rosetta XML, run the rewriter script (tools/xsd_xrw/rewrite_rosetta_script.py) on your input XML first.  The attribute values not being in quotes (scorefunction=talaris2014 instead of scorefunction="talaris2014") is a good indicator that this is your problem.
+3) If you are a developer and neither 1 nor 2 worked - email the developer's mailing list or try Slack.
+4) If you are an academic or commercial user - try the Rosetta Forums https://www.rosettacommons.org/forum
+
+
+Error messages were:
+Error: Unescaped '<' not allowed in attributes values
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: attributes construct error
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: Couldn't find end of Start Tag Chain line 36
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+------------------------------------------------------------
+Warning messages were:
+------------------------------------------------------------
+
+2026-03-30 16:22:07 EDT ForkPoolWorker-4 ERROR [__main__] Failed trying to generate /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Experimental_Structures/outputs/global_relax_wt/experi_relaxed_wt_1_A27H_A31C_A34S_A36V_A73W_B54R_B57S_rep2.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/protocols/rosetta_scripts/RosettaScriptsParser.cc:1217
+Input rosetta scripts XML file "./mutant_relax.xml" failed to validate against the rosetta scripts schema. Use the option -parser::output_schema <output filename> to output the schema to a file to see all valid options.
+Your XML has failed validation.  The error message below will tell you where in your XML file the error occurred.  Here's how to fix it:
+
+1) If the validation fails on something obvious, like an illegal attribute due to a spelling error (perhaps you used scorefnction instead of scorefunction), then you need to fix your XML file.
+2) If you haven't run the XML rewriter script and this might be pre-2017 Rosetta XML, run the rewriter script (tools/xsd_xrw/rewrite_rosetta_script.py) on your input XML first.  The attribute values not being in quotes (scorefunction=talaris2014 instead of scorefunction="talaris2014") is a good indicator that this is your problem.
+3) If you are a developer and neither 1 nor 2 worked - email the developer's mailing list or try Slack.
+4) If you are an academic or commercial user - try the Rosetta Forums https://www.rosettacommons.org/forum
+
+
+Error messages were:
+Error: Unescaped '<' not allowed in attributes values
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: attributes construct error
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+Error: Couldn't find end of Start Tag Chain line 36
+
+31:             task_operations="init,current,ex1_ex2,limitchi2,norepack,restrict2repacking" 
+32:             relaxscript="InterfaceDesign2019" repeats="5">
+33:             <MoveMap name="MM" >
+34:                 <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+35:                 <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+36:                 <Chain number="3" chi="true" bb="true /> <!-- chain Y (Receptor) -->
+37:                 <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+38:                 <Jump number="2" setting="true" /> <!-- Jump between A and Y -->
+39:             </MoveMap>
+40:         </FastRelax>
+41:     </MOVERS>
+------------------------------------------------------------
+Warning messages were:
+------------------------------------------------------------
+
+2026-03-30 16:22:07 EDT MainProcess INFO [__main__] Script execution completed
