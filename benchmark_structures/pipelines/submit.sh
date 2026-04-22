@@ -2,7 +2,7 @@
 
 #SBATCH --account=jgray21
 #SBATCH --partition=cpu
-#SBATCH --job-name=global_sconly_crossbenchmark
+#SBATCH --job-name=interface_bbsc_crossbenchmark
 #SBATCH --nodes=1     
 #SBATCH --ntasks=1                   
 #SBATCH --cpus-per-task=100  # adjust to max   

@@ -1,0 +1,152 @@
+Using existing logs directory.
+2026-04-21 21:21:18 EDT ForkPoolWorker-34 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-34 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-34 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-47 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-47 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-47 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-4 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-4 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-4 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-30 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-30 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-30 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-50 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-50 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-14 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-14 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-50 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-19 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-19 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-54 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-14 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-43 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-54 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-43 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-19 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-33 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-33 DEBUG [root] Cloning poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-71 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:18 EDT ForkPoolWorker-43 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-54 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-33 DEBUG [root] Applying Relax...
+2026-04-21 21:21:18 EDT ForkPoolWorker-6 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-55 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-18 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-46 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-94 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-13 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-36 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-57 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-61 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-26 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-1 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-69 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-10 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-8 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-37 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-32 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-76 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-15 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-40 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-39 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-3 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-100 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-70 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-78 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-16 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-51 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-25 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-11 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-9 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-63 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-87 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-28 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-35 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-97 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-42 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-27 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-99 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-38 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-58 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-52 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-77 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-93 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-5 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-96 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-12 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-83 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-59 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-68 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-73 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-53 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-79 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-75 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-29 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-67 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-66 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-31 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-89 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-86 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-21 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-62 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-91 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-41 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-82 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-95 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-60 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-80 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-45 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-88 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-48 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-65 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-90 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-23 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-85 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-74 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-98 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-81 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-20 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-64 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-17 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-84 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-92 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-7 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:19 EDT ForkPoolWorker-44 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:20 EDT ForkPoolWorker-2 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:20 EDT ForkPoolWorker-24 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:20 EDT ForkPoolWorker-56 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:20 EDT ForkPoolWorker-49 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:20 EDT ForkPoolWorker-72 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:21:20 EDT ForkPoolWorker-22 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-21 21:27:01 EDT ForkPoolWorker-43 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:27:04 EDT ForkPoolWorker-43 DEBUG [root] Done...Dumping Now
+2026-04-21 21:27:04 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_1KI1_trimmed/relaxed_cross_5.pdb
+2026-04-21 21:27:33 EDT ForkPoolWorker-50 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:27:36 EDT ForkPoolWorker-50 DEBUG [root] Done...Dumping Now
+2026-04-21 21:27:36 EDT ForkPoolWorker-34 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:27:36 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_1KI1_trimmed/relaxed_cross_3.pdb
+2026-04-21 21:27:38 EDT ForkPoolWorker-4 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:27:39 EDT ForkPoolWorker-34 DEBUG [root] Done...Dumping Now
+2026-04-21 21:27:39 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_1KI1_trimmed/relaxed_cross_1.pdb
+2026-04-21 21:27:40 EDT ForkPoolWorker-19 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:27:41 EDT ForkPoolWorker-4 DEBUG [root] Done...Dumping Now
+2026-04-21 21:27:41 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_1KI1_trimmed/relaxed_cross_2.pdb
+2026-04-21 21:27:43 EDT ForkPoolWorker-19 DEBUG [root] Done...Dumping Now
+2026-04-21 21:27:43 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_1KI1_trimmed/relaxed_cross_4.pdb
+2026-04-21 21:28:18 EDT ForkPoolWorker-30 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:28:21 EDT ForkPoolWorker-30 DEBUG [root] Done...Dumping Now
+2026-04-21 21:28:21 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_3QBV_trimmed/relaxed_cross_2.pdb
+2026-04-21 21:28:34 EDT ForkPoolWorker-47 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:28:37 EDT ForkPoolWorker-47 DEBUG [root] Done...Dumping Now
+2026-04-21 21:28:37 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_3QBV_trimmed/relaxed_cross_1.pdb
+2026-04-21 21:28:40 EDT ForkPoolWorker-33 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:28:43 EDT ForkPoolWorker-54 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:28:43 EDT ForkPoolWorker-33 DEBUG [root] Done...Dumping Now
+2026-04-21 21:28:43 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_3QBV_trimmed/relaxed_cross_5.pdb
+2026-04-21 21:28:45 EDT ForkPoolWorker-54 DEBUG [root] Done...Dumping Now
+2026-04-21 21:28:46 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_3QBV_trimmed/relaxed_cross_4.pdb
+2026-04-21 21:28:46 EDT ForkPoolWorker-14 DEBUG [root] Applying InterfaceAnalyzer...
+2026-04-21 21:28:49 EDT ForkPoolWorker-14 DEBUG [root] Done...Dumping Now
+2026-04-21 21:28:49 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_3QBV_trimmed/relaxed_cross_3.pdb
+2026-04-21 21:28:50 EDT MainProcess INFO [root] Script execution completed

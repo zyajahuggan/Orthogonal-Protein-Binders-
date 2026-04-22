@@ -89,10 +89,10 @@ def main():
     parser.add_argument("--ortho_pdb", type=str, required=False,
                         default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/trimmedint3QBVcdc1KI1.pdb')
     parser.add_argument("--out_wt", type=str, required=False,
-                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/global_sconly_trimmedint1KI1cdc3QBV',
+                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_int1KI1cdc3QBV_trimmed',
                         help="Output dir for WT")
     parser.add_argument("--out_ortho", type=str, required=False,
-                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/global_sconly_trimmedint3QBVcdc1KI1',
+                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/benchmark_structures/inputs/interface_bbsc_int3QBVcdc1KI1_trimmed',
                         help="Output dir for Ortho")
     parser.add_argument("--nstruct", type=int, default=5,
                         help="Number of relax runs per structure")
