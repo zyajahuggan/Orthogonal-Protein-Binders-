@@ -1,0 +1,24 @@
+/home/zyhuggan/miniconda3/envs/mpnn/bin/python
+Using PY=/home/zyhuggan/miniconda3/envs/mpnn/bin/python
+Torch OK: 2.5.1
+Torch loaded: 2.5.1
+Wrote /scratch/jgray21/zyhuggan/tryingggg/pos_neg_design/OrthoMPNN/pdgf/output/enrich_ortho_interface/tied_pos.jsonl
+Tied 7 interface positions
+✅ Wrote /scratch/jgray21/zyhuggan/tryingggg/pos_neg_design/OrthoMPNN/pdgf/output/enrich_ortho_interface/fixed_positions.jsonl
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+discarded {'bad_chars': 0, 'too_long': 0, 'bad_seq_length': 0}
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+[DBG] first_global C = 194
+[DBG] residue_idx C first 5 = [394, 395, 396, 397, 398]
+Generating sequences for: triple_renumbered
+50 sequences of length 1480 generated in 640.9561 seconds

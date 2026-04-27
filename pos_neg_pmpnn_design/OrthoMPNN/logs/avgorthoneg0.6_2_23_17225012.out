@@ -1,0 +1,522 @@
+Using existing logs directory.
+2026-02-23 10:48:50 EST MainProcess INFO [numexpr.utils] Note: NumExpr detected 48 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-02-23 10:48:50 EST MainProcess INFO [numexpr.utils] NumExpr defaulting to 8 threads.
+[DEBUG] Parsed N49L, N52T, R68T -> [('A 49', 'L'), ('A 52', 'T'), ('A 68', 'T')]
+[DEBUG] Parsed N29T, N52R, R68L -> [('A 29', 'T'), ('A 52', 'R'), ('A 68', 'L')]
+[DEBUG] Parsed R22K, N29T, N49I, R68L -> [('A 22', 'K'), ('A 29', 'T'), ('A 49', 'I'), ('A 68', 'L')]
+[DEBUG] Parsed N49I, N52R, R68L -> [('A 49', 'I'), ('A 52', 'R'), ('A 68', 'L')]
+[DEBUG] Parsed R22Q, N49V, R68Q -> [('A 22', 'Q'), ('A 49', 'V'), ('A 68', 'Q')]
+[DEBUG] Parsed R22K, N49V, R68L -> [('A 22', 'K'), ('A 49', 'V'), ('A 68', 'L')]
+[DEBUG] Parsed N29G, N52R, R68D -> [('A 29', 'G'), ('A 52', 'R'), ('A 68', 'D')]
+[DEBUG] Parsed N49T, N52R, R68E -> [('A 49', 'T'), ('A 52', 'R'), ('A 68', 'E')]
+[DEBUG] Parsed R22P, N49V, R68L -> [('A 22', 'P'), ('A 49', 'V'), ('A 68', 'L')]
+[DEBUG] Parsed R22D, R68E -> [('A 22', 'D'), ('A 68', 'E')]
+[DEBUG] Parsed R22P, N49I, R68Y -> [('A 22', 'P'), ('A 49', 'I'), ('A 68', 'Y')]
+[DEBUG] Parsed R22K, D26N, N29T, R68T -> [('A 22', 'K'), ('A 26', 'N'), ('A 29', 'T'), ('A 68', 'T')]
+[DEBUG] Parsed N49V, R68T -> [('A 49', 'V'), ('A 68', 'T')]
+[DEBUG] Parsed R22K, R68Y -> [('A 22', 'K'), ('A 68', 'Y')]
+[DEBUG] Parsed R22T, R68Q -> [('A 22', 'T'), ('A 68', 'Q')]
+[DEBUG] Parsed R22K, D26N, N52R, R68K -> [('A 22', 'K'), ('A 26', 'N'), ('A 52', 'R'), ('A 68', 'K')]
+[DEBUG] Parsed N29T, N49V, N52R, R68L -> [('A 29', 'T'), ('A 49', 'V'), ('A 52', 'R'), ('A 68', 'L')]
+[DEBUG] Parsed R22K, R68K -> [('A 22', 'K'), ('A 68', 'K')]
+[DEBUG] Parsed R22A, R68E -> [('A 22', 'A'), ('A 68', 'E')]
+[DEBUG] Parsed R22K, N49L, R68T -> [('A 22', 'K'), ('A 49', 'L'), ('A 68', 'T')]
+[DEBUG] Parsed R22T, N29T, N52R, R68A -> [('A 22', 'T'), ('A 29', 'T'), ('A 52', 'R'), ('A 68', 'A')]
+[DEBUG] Parsed R22T, R68T -> [('A 22', 'T'), ('A 68', 'T')]
+[DEBUG] Parsed R68M -> [('A 68', 'M')]
+[DEBUG] Parsed R22P, R68L -> [('A 22', 'P'), ('A 68', 'L')]
+[DEBUG] Parsed R22Q, N49I, N52R, R68T -> [('A 22', 'Q'), ('A 49', 'I'), ('A 52', 'R'), ('A 68', 'T')]
+[DEBUG] Parsed R22K, N49L, N52T, R68D -> [('A 22', 'K'), ('A 49', 'L'), ('A 52', 'T'), ('A 68', 'D')]
+[DEBUG] Parsed N49I, R68L -> [('A 49', 'I'), ('A 68', 'L')]
+[DEBUG] Parsed N52R, R68T -> [('A 52', 'R'), ('A 68', 'T')]
+[DEBUG] Parsed R22E, N29G, R68T -> [('A 22', 'E'), ('A 29', 'G'), ('A 68', 'T')]
+[DEBUG] Parsed N52T, R68L -> [('A 52', 'T'), ('A 68', 'L')]
+[DEBUG] Parsed R68Q -> [('A 68', 'Q')]
+[DEBUG] Parsed R22K, N49F, R68L -> [('A 22', 'K'), ('A 49', 'F'), ('A 68', 'L')]
+[DEBUG] Parsed N31D, R68D -> [('A 31', 'D'), ('A 68', 'D')]
+[DEBUG] Parsed N52R, R68E -> [('A 52', 'R'), ('A 68', 'E')]
+[DEBUG] Parsed R22S, R68L -> [('A 22', 'S'), ('A 68', 'L')]
+[DEBUG] Parsed R22K, N49L, R68E -> [('A 22', 'K'), ('A 49', 'L'), ('A 68', 'E')]
+[DEBUG] Parsed R22S, R68T -> [('A 22', 'S'), ('A 68', 'T')]
+[DEBUG] Parsed R22K, N52T, R68L -> [('A 22', 'K'), ('A 52', 'T'), ('A 68', 'L')]
+[DEBUG] Parsed N29T, N49L, N52R, R68T -> [('A 29', 'T'), ('A 49', 'L'), ('A 52', 'R'), ('A 68', 'T')]
+[DEBUG] Parsed R22P, N49L, N52T, R68L -> [('A 22', 'P'), ('A 49', 'L'), ('A 52', 'T'), ('A 68', 'L')]
+[DEBUG] Parsed N29T, N52R, R68Y -> [('A 29', 'T'), ('A 52', 'R'), ('A 68', 'Y')]
+[DEBUG] Parsed R68Y -> [('A 68', 'Y')]
+[DEBUG] Parsed R22K, N52R, R68Y -> [('A 22', 'K'), ('A 52', 'R'), ('A 68', 'Y')]
+[DEBUG] Creating jobs for bundle: [('A 49', 'L'), ('A 52', 'T'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49L_A52T_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49L_A52T_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49L_A52T_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49L_A52T_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49L_A52T_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 29', 'T'), ('A 52', 'R'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 29', 'T'), ('A 49', 'I'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 49', 'I'), ('A 52', 'R'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A52R_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A52R_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A52R_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A52R_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A52R_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'Q'), ('A 49', 'V'), ('A 68', 'Q')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 49', 'V'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49V_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49V_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49V_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49V_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49V_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 29', 'G'), ('A 52', 'R'), ('A 68', 'D')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29G_A52R_A68D_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29G_A52R_A68D_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29G_A52R_A68D_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29G_A52R_A68D_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29G_A52R_A68D_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 49', 'T'), ('A 52', 'R'), ('A 68', 'E')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49T_A52R_A68E_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49T_A52R_A68E_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49T_A52R_A68E_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49T_A52R_A68E_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49T_A52R_A68E_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'P'), ('A 49', 'V'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49V_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49V_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49V_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49V_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49V_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'D'), ('A 68', 'E')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22D_A68E_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22D_A68E_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22D_A68E_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22D_A68E_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22D_A68E_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'P'), ('A 49', 'I'), ('A 68', 'Y')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 26', 'N'), ('A 29', 'T'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 49', 'V'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49V_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49V_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49V_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49V_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49V_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 68', 'Y')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68Y_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68Y_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68Y_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68Y_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68Y_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'T'), ('A 68', 'Q')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68Q_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68Q_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68Q_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68Q_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68Q_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 26', 'N'), ('A 52', 'R'), ('A 68', 'K')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 29', 'T'), ('A 49', 'V'), ('A 52', 'R'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 68', 'K')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68K_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68K_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68K_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68K_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A68K_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'A'), ('A 68', 'E')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22A_A68E_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22A_A68E_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22A_A68E_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22A_A68E_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22A_A68E_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 49', 'L'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'T'), ('A 29', 'T'), ('A 52', 'R'), ('A 68', 'A')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'T'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22T_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 68', 'M')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68M_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68M_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68M_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68M_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68M_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'P'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'Q'), ('A 49', 'I'), ('A 52', 'R'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 49', 'L'), ('A 52', 'T'), ('A 68', 'D')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 49', 'I'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A49I_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 52', 'R'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'E'), ('A 29', 'G'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22E_A29G_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22E_A29G_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22E_A29G_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22E_A29G_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22E_A29G_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 52', 'T'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52T_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52T_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52T_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52T_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52T_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 68', 'Q')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Q_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Q_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Q_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Q_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Q_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 49', 'F'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49F_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49F_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49F_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49F_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49F_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 31', 'D'), ('A 68', 'D')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A31D_A68D_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A31D_A68D_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A31D_A68D_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A31D_A68D_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A31D_A68D_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 52', 'R'), ('A 68', 'E')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68E_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68E_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68E_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68E_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A52R_A68E_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'S'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 49', 'L'), ('A 68', 'E')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68E_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68E_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68E_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68E_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A49L_A68E_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'S'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22S_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 52', 'T'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52T_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52T_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52T_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52T_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52T_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 29', 'T'), ('A 49', 'L'), ('A 52', 'R'), ('A 68', 'T')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'P'), ('A 49', 'L'), ('A 52', 'T'), ('A 68', 'L')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 29', 'T'), ('A 52', 'R'), ('A 68', 'Y')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 68', 'Y')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Y_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Y_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Y_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Y_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A68Y_rep5.pdb
+[DEBUG] Creating jobs for bundle: [('A 22', 'K'), ('A 52', 'R'), ('A 68', 'Y')]
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep1.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep2.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep3.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep4.pdb
+[DEBUG] Output file: /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.6/0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep5.pdb
+2026-02-23 10:48:54 EST MainProcess INFO [__main__] Processing a total of 215 jobs
+2026-02-23 10:48:54 EST MainProcess INFO [__main__] Starting pool with 48 worker(s)
+2026-02-23 12:02:39 EST ForkPoolWorker-6 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49L_A52T_A68T_rep1.pdb
+2026-02-23 12:02:57 EST ForkPoolWorker-27 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep5.pdb
+2026-02-23 12:03:11 EST ForkPoolWorker-16 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68K_rep4.pdb
+2026-02-23 12:03:17 EST ForkPoolWorker-39 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49V_A68L_rep5.pdb
+2026-02-23 12:03:19 EST ForkPoolWorker-10 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68Q_rep3.pdb
+2026-02-23 12:03:38 EST ForkPoolWorker-31 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep1.pdb
+2026-02-23 12:03:53 EST ForkPoolWorker-26 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep3.pdb
+2026-02-23 12:04:01 EST ForkPoolWorker-44 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68Q_rep1.pdb
+2026-02-23 12:04:22 EST ForkPoolWorker-41 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep1.pdb
+2026-02-23 12:04:23 EST ForkPoolWorker-1 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49L_A52T_A68T_rep3.pdb
+2026-02-23 12:04:40 EST ForkPoolWorker-40 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49L_A52T_A68T_rep5.pdb
+2026-02-23 12:04:49 EST ForkPoolWorker-3 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49V_A68L_rep4.pdb
+2026-02-23 12:04:56 EST ForkPoolWorker-20 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep3.pdb
+2026-02-23 12:04:57 EST ForkPoolWorker-23 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22A_A68E_rep1.pdb
+2026-02-23 12:04:58 EST ForkPoolWorker-17 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68L_rep4.pdb
+2026-02-23 12:05:18 EST ForkPoolWorker-29 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49V_A68T_rep3.pdb
+2026-02-23 12:05:19 EST ForkPoolWorker-5 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep4.pdb
+2026-02-23 12:05:22 EST ForkPoolWorker-15 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29G_A52R_A68D_rep5.pdb
+2026-02-23 12:05:24 EST ForkPoolWorker-2 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22D_A68E_rep4.pdb
+2026-02-23 12:05:26 EST ForkPoolWorker-36 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A52R_A68L_rep2.pdb
+2026-02-23 12:05:30 EST ForkPoolWorker-12 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68Q_rep5.pdb
+2026-02-23 12:05:41 EST ForkPoolWorker-37 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22A_A68E_rep3.pdb
+2026-02-23 12:05:49 EST ForkPoolWorker-18 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49T_A52R_A68E_rep2.pdb
+2026-02-23 12:06:04 EST ForkPoolWorker-43 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep5.pdb
+2026-02-23 12:06:11 EST ForkPoolWorker-21 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68Y_rep4.pdb
+2026-02-23 12:06:11 EST ForkPoolWorker-34 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep5.pdb
+2026-02-23 12:06:22 EST ForkPoolWorker-48 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49V_A68L_rep1.pdb
+2026-02-23 12:06:22 EST ForkPoolWorker-13 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49V_A68T_rep5.pdb
+2026-02-23 12:06:24 EST ForkPoolWorker-7 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29G_A52R_A68D_rep3.pdb
+2026-02-23 12:06:30 EST ForkPoolWorker-28 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep2.pdb
+2026-02-23 12:06:38 EST ForkPoolWorker-25 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68K_rep2.pdb
+2026-02-23 12:06:40 EST ForkPoolWorker-8 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49V_A68L_rep2.pdb
+2026-02-23 12:06:45 EST ForkPoolWorker-45 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49T_A52R_A68E_rep4.pdb
+2026-02-23 12:06:46 EST ForkPoolWorker-9 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep5.pdb
+2026-02-23 12:07:09 EST ForkPoolWorker-30 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep2.pdb
+2026-02-23 12:07:16 EST ForkPoolWorker-11 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep1.pdb
+2026-02-23 12:07:19 EST ForkPoolWorker-47 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49V_A68T_rep1.pdb
+2026-02-23 12:07:26 EST ForkPoolWorker-33 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29G_A52R_A68D_rep1.pdb
+2026-02-23 12:07:29 EST ForkPoolWorker-19 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49V_A68L_rep3.pdb
+2026-02-23 12:07:35 EST ForkPoolWorker-38 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep1.pdb
+2026-02-23 12:07:39 EST ForkPoolWorker-35 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68Y_rep2.pdb
+2026-02-23 12:07:56 EST ForkPoolWorker-4 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A52R_A68L_rep4.pdb
+2026-02-23 12:08:16 EST ForkPoolWorker-14 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68L_rep2.pdb
+2026-02-23 12:08:19 EST ForkPoolWorker-22 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep3.pdb
+2026-02-23 12:08:26 EST ForkPoolWorker-24 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22A_A68E_rep5.pdb
+2026-02-23 12:08:30 EST ForkPoolWorker-42 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep3.pdb
+2026-02-23 12:09:18 EST ForkPoolWorker-46 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22D_A68E_rep2.pdb
+2026-02-23 12:09:22 EST ForkPoolWorker-32 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep4.pdb
+2026-02-23 13:14:38 EST ForkPoolWorker-3 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49V_A68L_rep5.pdb
+2026-02-23 13:16:53 EST ForkPoolWorker-10 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68Q_rep4.pdb
+2026-02-23 13:17:38 EST ForkPoolWorker-31 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep2.pdb
+2026-02-23 13:17:43 EST ForkPoolWorker-16 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68K_rep5.pdb
+2026-02-23 13:17:57 EST ForkPoolWorker-44 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68Q_rep2.pdb
+2026-02-23 13:18:01 EST ForkPoolWorker-26 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep4.pdb
+2026-02-23 13:18:06 EST ForkPoolWorker-1 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49L_A52T_A68T_rep4.pdb
+2026-02-23 13:18:21 EST ForkPoolWorker-6 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49L_A52T_A68T_rep2.pdb
+2026-02-23 13:18:35 EST ForkPoolWorker-27 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49V_A68L_rep1.pdb
+2026-02-23 13:18:56 EST ForkPoolWorker-20 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49V_A68Q_rep4.pdb
+2026-02-23 13:18:57 EST ForkPoolWorker-36 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A52R_A68L_rep3.pdb
+2026-02-23 13:19:12 EST ForkPoolWorker-9 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A52R_A68L_rep1.pdb
+2026-02-23 13:19:34 EST ForkPoolWorker-4 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A52R_A68L_rep5.pdb
+2026-02-23 13:19:55 EST ForkPoolWorker-8 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49V_A68L_rep3.pdb
+2026-02-23 13:19:58 EST ForkPoolWorker-41 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A29T_A49I_A68L_rep2.pdb
+2026-02-23 13:20:16 EST ForkPoolWorker-39 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22D_A68E_rep1.pdb
+2026-02-23 13:20:31 EST ForkPoolWorker-12 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep1.pdb
+2026-02-23 13:20:44 EST ForkPoolWorker-23 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22A_A68E_rep2.pdb
+2026-02-23 13:20:44 EST ForkPoolWorker-17 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68L_rep5.pdb
+2026-02-23 13:21:16 EST ForkPoolWorker-18 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49T_A52R_A68E_rep3.pdb
+2026-02-23 13:21:44 EST ForkPoolWorker-40 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68L_rep1.pdb
+2026-02-23 13:21:47 EST ForkPoolWorker-15 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49T_A52R_A68E_rep1.pdb
+2026-02-23 13:21:51 EST ForkPoolWorker-37 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22A_A68E_rep4.pdb
+2026-02-23 13:22:24 EST ForkPoolWorker-7 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29G_A52R_A68D_rep4.pdb
+2026-02-23 13:22:35 EST ForkPoolWorker-33 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29G_A52R_A68D_rep2.pdb
+2026-02-23 13:22:44 EST ForkPoolWorker-2 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22D_A68E_rep5.pdb
+2026-02-23 13:23:00 EST ForkPoolWorker-45 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49T_A52R_A68E_rep5.pdb
+2026-02-23 13:23:12 EST ForkPoolWorker-43 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68K_rep1.pdb
+2026-02-23 13:23:20 EST ForkPoolWorker-14 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68L_rep3.pdb
+2026-02-23 13:23:22 EST ForkPoolWorker-34 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep1.pdb
+2026-02-23 13:23:23 EST ForkPoolWorker-29 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49V_A68T_rep4.pdb
+2026-02-23 13:23:28 EST ForkPoolWorker-11 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep2.pdb
+2026-02-23 13:23:29 EST ForkPoolWorker-25 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68K_rep3.pdb
+2026-02-23 13:23:30 EST ForkPoolWorker-5 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep5.pdb
+2026-02-23 13:23:45 EST ForkPoolWorker-19 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49V_A68L_rep4.pdb
+2026-02-23 13:23:49 EST ForkPoolWorker-21 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68Y_rep5.pdb
+2026-02-23 13:23:55 EST ForkPoolWorker-24 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68T_rep1.pdb
+2026-02-23 13:24:06 EST ForkPoolWorker-42 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49V_A52R_A68L_rep4.pdb
+2026-02-23 13:24:14 EST ForkPoolWorker-47 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49V_A68T_rep2.pdb
+2026-02-23 13:24:14 EST ForkPoolWorker-35 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68Y_rep3.pdb
+2026-02-23 13:24:59 EST ForkPoolWorker-13 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A68Y_rep1.pdb
+2026-02-23 13:25:28 EST ForkPoolWorker-28 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A52R_A68K_rep3.pdb
+2026-02-23 13:25:38 EST ForkPoolWorker-48 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49V_A68L_rep2.pdb
+2026-02-23 13:25:54 EST ForkPoolWorker-30 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep3.pdb
+2026-02-23 13:26:12 EST ForkPoolWorker-32 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A26N_A29T_A68T_rep5.pdb
+2026-02-23 13:27:17 EST ForkPoolWorker-38 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep2.pdb
+2026-02-23 13:27:39 EST ForkPoolWorker-22 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49I_A68Y_rep4.pdb
+2026-02-23 13:28:14 EST ForkPoolWorker-46 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22D_A68E_rep3.pdb
+2026-02-23 14:30:30 EST ForkPoolWorker-3 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68T_rep2.pdb
+2026-02-23 14:32:18 EST ForkPoolWorker-16 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep3.pdb
+2026-02-23 14:32:25 EST ForkPoolWorker-6 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68M_rep1.pdb
+2026-02-23 14:32:28 EST ForkPoolWorker-10 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68T_rep4.pdb
+2026-02-23 14:33:21 EST ForkPoolWorker-41 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep5.pdb
+2026-02-23 14:34:11 EST ForkPoolWorker-8 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep3.pdb
+2026-02-23 14:34:25 EST ForkPoolWorker-1 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68T_rep4.pdb
+2026-02-23 14:34:29 EST ForkPoolWorker-20 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68M_rep5.pdb
+2026-02-23 14:34:48 EST ForkPoolWorker-12 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep4.pdb
+2026-02-23 14:34:53 EST ForkPoolWorker-26 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68T_rep2.pdb
+2026-02-23 14:35:04 EST ForkPoolWorker-37 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22E_A29G_A68T_rep1.pdb
+2026-02-23 14:35:07 EST ForkPoolWorker-31 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep1.pdb
+2026-02-23 14:35:08 EST ForkPoolWorker-4 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep1.pdb
+2026-02-23 14:35:56 EST ForkPoolWorker-9 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A68L_rep4.pdb
+2026-02-23 14:36:25 EST ForkPoolWorker-27 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68M_rep3.pdb
+2026-02-23 14:36:28 EST ForkPoolWorker-44 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep5.pdb
+2026-02-23 14:37:19 EST ForkPoolWorker-18 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A68L_rep5.pdb
+2026-02-23 14:37:27 EST ForkPoolWorker-36 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A68L_rep2.pdb
+2026-02-23 14:37:29 EST ForkPoolWorker-17 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A68L_rep3.pdb
+2026-02-23 14:37:37 EST ForkPoolWorker-23 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A68L_rep1.pdb
+2026-02-23 14:37:43 EST ForkPoolWorker-15 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68T_rep4.pdb
+2026-02-23 14:37:46 EST ForkPoolWorker-7 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22E_A29G_A68T_rep3.pdb
+2026-02-23 14:37:56 EST ForkPoolWorker-39 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep2.pdb
+2026-02-23 14:38:09 EST ForkPoolWorker-2 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52T_A68L_rep2.pdb
+2026-02-23 14:38:25 EST ForkPoolWorker-11 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49F_A68L_rep4.pdb
+2026-02-23 14:38:26 EST ForkPoolWorker-34 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Q_rep5.pdb
+2026-02-23 14:39:03 EST ForkPoolWorker-14 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Q_rep3.pdb
+2026-02-23 14:39:08 EST ForkPoolWorker-40 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68T_rep2.pdb
+2026-02-23 14:39:10 EST ForkPoolWorker-43 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Q_rep1.pdb
+2026-02-23 14:39:24 EST ForkPoolWorker-29 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49F_A68L_rep2.pdb
+2026-02-23 14:39:40 EST ForkPoolWorker-45 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52T_A68L_rep4.pdb
+2026-02-23 14:39:57 EST ForkPoolWorker-5 INFO [__main__] Output: 0.6_relaxed_ortho_3_A31D_A68D_rep3.pdb
+2026-02-23 14:40:24 EST ForkPoolWorker-19 INFO [__main__] Output: 0.6_relaxed_ortho_3_A31D_A68D_rep5.pdb
+2026-02-23 14:40:41 EST ForkPoolWorker-48 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68T_rep1.pdb
+2026-02-23 14:40:54 EST ForkPoolWorker-47 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68L_rep3.pdb
+2026-02-23 14:40:57 EST ForkPoolWorker-25 INFO [__main__] Output: 0.6_relaxed_ortho_3_A31D_A68D_rep1.pdb
+2026-02-23 14:41:02 EST ForkPoolWorker-33 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22E_A29G_A68T_rep5.pdb
+2026-02-23 14:41:30 EST ForkPoolWorker-21 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68E_rep2.pdb
+2026-02-23 14:42:07 EST ForkPoolWorker-32 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68T_rep5.pdb
+2026-02-23 14:42:19 EST ForkPoolWorker-38 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52T_A68L_rep2.pdb
+2026-02-23 14:42:27 EST ForkPoolWorker-35 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68L_rep5.pdb
+2026-02-23 14:42:53 EST ForkPoolWorker-24 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68E_rep4.pdb
+2026-02-23 14:42:55 EST ForkPoolWorker-22 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52T_A68L_rep4.pdb
+2026-02-23 14:43:18 EST ForkPoolWorker-13 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68E_rep2.pdb
+2026-02-23 14:43:58 EST ForkPoolWorker-42 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68L_rep1.pdb
+2026-02-23 14:44:33 EST ForkPoolWorker-30 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68T_rep3.pdb
+2026-02-23 14:44:35 EST ForkPoolWorker-46 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep1.pdb
+2026-02-23 14:44:48 EST ForkPoolWorker-28 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68E_rep4.pdb
+2026-02-23 15:44:48 EST ForkPoolWorker-3 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68T_rep3.pdb
+2026-02-23 15:45:18 EST ForkPoolWorker-16 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep4.pdb
+2026-02-23 15:46:35 EST ForkPoolWorker-8 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep4.pdb
+2026-02-23 15:49:44 EST ForkPoolWorker-10 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68T_rep5.pdb
+2026-02-23 15:49:48 EST ForkPoolWorker-41 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep1.pdb
+2026-02-23 15:50:09 EST ForkPoolWorker-1 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68T_rep5.pdb
+2026-02-23 15:50:10 EST ForkPoolWorker-6 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68M_rep2.pdb
+2026-02-23 15:50:11 EST ForkPoolWorker-12 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep5.pdb
+2026-02-23 15:50:11 EST ForkPoolWorker-45 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52T_A68L_rep5.pdb
+2026-02-23 15:50:38 EST ForkPoolWorker-4 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22Q_A49I_A52R_A68T_rep2.pdb
+2026-02-23 15:50:42 EST ForkPoolWorker-23 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A68L_rep2.pdb
+2026-02-23 15:50:49 EST ForkPoolWorker-14 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Q_rep4.pdb
+2026-02-23 15:51:30 EST ForkPoolWorker-26 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68T_rep3.pdb
+2026-02-23 15:51:32 EST ForkPoolWorker-44 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A68T_rep1.pdb
+2026-02-23 15:51:34 EST ForkPoolWorker-20 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A68L_rep1.pdb
+2026-02-23 15:51:40 EST ForkPoolWorker-9 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A68L_rep5.pdb
+2026-02-23 15:51:56 EST ForkPoolWorker-27 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68M_rep4.pdb
+2026-02-23 15:52:29 EST ForkPoolWorker-17 INFO [__main__] Output: 0.6_relaxed_ortho_3_A49I_A68L_rep4.pdb
+2026-02-23 15:52:30 EST ForkPoolWorker-34 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49F_A68L_rep1.pdb
+2026-02-23 15:52:42 EST ForkPoolWorker-11 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49F_A68L_rep5.pdb
+2026-02-23 15:53:14 EST ForkPoolWorker-36 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A68L_rep3.pdb
+2026-02-23 15:53:25 EST ForkPoolWorker-2 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52T_A68L_rep3.pdb
+2026-02-23 15:53:37 EST ForkPoolWorker-39 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A52T_A68D_rep3.pdb
+2026-02-23 15:53:38 EST ForkPoolWorker-29 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49F_A68L_rep3.pdb
+2026-02-23 15:53:48 EST ForkPoolWorker-31 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22T_A29T_A52R_A68A_rep2.pdb
+2026-02-23 15:53:57 EST ForkPoolWorker-37 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22E_A29G_A68T_rep2.pdb
+2026-02-23 15:54:16 EST ForkPoolWorker-15 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68T_rep5.pdb
+2026-02-23 15:54:16 EST ForkPoolWorker-21 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68E_rep3.pdb
+2026-02-23 15:54:19 EST ForkPoolWorker-7 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22E_A29G_A68T_rep4.pdb
+2026-02-23 15:54:26 EST ForkPoolWorker-18 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68T_rep1.pdb
+2026-02-23 15:55:16 EST ForkPoolWorker-25 INFO [__main__] Output: 0.6_relaxed_ortho_3_A31D_A68D_rep2.pdb
+2026-02-23 15:55:49 EST ForkPoolWorker-40 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68T_rep3.pdb
+2026-02-23 15:56:06 EST ForkPoolWorker-43 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Q_rep2.pdb
+2026-02-23 15:56:27 EST ForkPoolWorker-5 INFO [__main__] Output: 0.6_relaxed_ortho_3_A31D_A68D_rep4.pdb
+2026-02-23 15:57:18 EST ForkPoolWorker-48 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68T_rep2.pdb
+2026-02-23 15:57:40 EST ForkPoolWorker-33 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52T_A68L_rep1.pdb
+2026-02-23 15:58:00 EST ForkPoolWorker-22 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52T_A68L_rep5.pdb
+2026-02-23 15:58:30 EST ForkPoolWorker-32 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52T_A68L_rep1.pdb
+2026-02-23 15:58:52 EST ForkPoolWorker-19 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68E_rep1.pdb
+2026-02-23 15:59:04 EST ForkPoolWorker-46 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep2.pdb
+2026-02-23 15:59:36 EST ForkPoolWorker-35 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68E_rep1.pdb
+2026-02-23 16:00:00 EST ForkPoolWorker-24 INFO [__main__] Output: 0.6_relaxed_ortho_3_A52R_A68E_rep5.pdb
+2026-02-23 16:00:10 EST ForkPoolWorker-13 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68E_rep3.pdb
+2026-02-23 16:00:12 EST ForkPoolWorker-38 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52T_A68L_rep3.pdb
+2026-02-23 16:00:34 EST ForkPoolWorker-47 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68L_rep4.pdb
+2026-02-23 16:00:44 EST ForkPoolWorker-30 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68T_rep4.pdb
+2026-02-23 16:01:20 EST ForkPoolWorker-28 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A49L_A68E_rep5.pdb
+2026-02-23 16:01:22 EST ForkPoolWorker-42 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22S_A68L_rep2.pdb
+2026-02-23 16:53:30 EST ForkPoolWorker-3 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep3.pdb
+2026-02-23 16:55:14 EST ForkPoolWorker-8 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep2.pdb
+2026-02-23 16:56:44 EST ForkPoolWorker-16 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep5.pdb
+2026-02-23 16:57:27 EST ForkPoolWorker-6 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep5.pdb
+2026-02-23 16:58:12 EST ForkPoolWorker-41 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep1.pdb
+2026-02-23 16:58:54 EST ForkPoolWorker-4 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep1.pdb
+2026-02-23 16:58:54 EST ForkPoolWorker-1 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep3.pdb
+2026-02-23 16:59:15 EST ForkPoolWorker-14 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep5.pdb
+2026-02-23 17:01:00 EST ForkPoolWorker-23 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep3.pdb
+2026-02-23 17:01:00 EST ForkPoolWorker-45 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Y_rep4.pdb
+2026-02-23 17:01:09 EST ForkPoolWorker-10 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep4.pdb
+2026-02-23 17:02:09 EST ForkPoolWorker-12 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Y_rep2.pdb
+2026-02-23 18:03:03 EST ForkPoolWorker-3 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A49L_A52R_A68T_rep4.pdb
+2026-02-23 18:06:15 EST ForkPoolWorker-1 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep4.pdb
+2026-02-23 18:06:33 EST ForkPoolWorker-8 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep3.pdb
+2026-02-23 18:07:02 EST ForkPoolWorker-41 INFO [__main__] Output: 0.6_relaxed_ortho_3_A29T_A52R_A68Y_rep2.pdb
+2026-02-23 18:07:49 EST ForkPoolWorker-16 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep1.pdb
+2026-02-23 18:08:28 EST ForkPoolWorker-6 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Y_rep1.pdb
+2026-02-23 18:09:06 EST ForkPoolWorker-23 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep4.pdb
+2026-02-23 18:09:15 EST ForkPoolWorker-4 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22K_A52R_A68Y_rep2.pdb
+2026-02-23 18:10:56 EST ForkPoolWorker-10 INFO [__main__] Output: 0.6_relaxed_ortho_3_A22P_A49L_A52T_A68L_rep5.pdb
+2026-02-23 18:12:14 EST ForkPoolWorker-45 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Y_rep5.pdb
+2026-02-23 18:13:23 EST ForkPoolWorker-12 INFO [__main__] Output: 0.6_relaxed_ortho_3_A68Y_rep3.pdb
+2026-02-23 18:13:24 EST MainProcess INFO [__main__] Script execution completed

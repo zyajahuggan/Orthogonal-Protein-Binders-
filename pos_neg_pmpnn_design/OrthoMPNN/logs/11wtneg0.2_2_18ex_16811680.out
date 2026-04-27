@@ -1,0 +1,11 @@
+Using existing logs directory.
+2026-02-18 11:28:30 EST MainProcess INFO [__main__] Processing a total of 1 jobs
+2026-02-18 11:28:30 EST MainProcess INFO [__main__] Starting pool with 1 worker(s)
+2026-02-18 11:28:53 EST ForkPoolWorker-1 ERROR [__main__] Failed trying to generate /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmpnn_wt/neg0.2/0.2_relaxed_ortho_3_A27Q_A31D_A34T_A36N_A73K_B54N_B57N_rep1.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/core/import_pose/import_pose.cc:361
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_ortho_3.pdb"
+
+
+2026-02-18 11:28:53 EST MainProcess INFO [__main__] Script execution completed

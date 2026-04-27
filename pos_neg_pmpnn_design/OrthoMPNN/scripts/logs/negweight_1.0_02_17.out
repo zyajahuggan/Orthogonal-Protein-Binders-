@@ -1,0 +1,23 @@
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/bin/python
+Using PY=/home/zhuggan1/scr4_jgray21/zhuggan1/miniconda3/envs/mpnn/bin/python
+Torch OK: 2.1.1+cu118
+Wrote /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/pdgf/output//tied_pos.jsonl
+Tied 7 interface positions
+Wrote fixed_positions.jsonl
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+discarded {'bad_chars': 0, 'too_long': 0, 'bad_seq_length': 0}
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+[DBG] first_global C = 194
+[DBG] residue_idx C first 5 = [394, 395, 396, 397, 398]
+Generating sequences for: triple_ortho_complex
+50 sequences of length 1480 generated in 199.2795 seconds

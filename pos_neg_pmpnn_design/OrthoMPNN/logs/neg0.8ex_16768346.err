@@ -1,0 +1,4 @@
+  File "mutant_relax.py", line 157
+    ("A 31", "D),
+                ^
+SyntaxError: EOL while scanning string literal

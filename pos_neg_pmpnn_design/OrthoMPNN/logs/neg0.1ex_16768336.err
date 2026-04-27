@@ -1,0 +1,3 @@
+
+ERROR: Assertion `chain_index <= pose.conformation().num_chains()` failed.
+ERROR:: Exit from: /home/benchmark/rosetta/source/src/core/select/residue_selector/ChainSelector.cc line: 158

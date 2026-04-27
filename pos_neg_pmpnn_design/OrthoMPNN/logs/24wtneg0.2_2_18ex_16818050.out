@@ -1,0 +1,7 @@
+Using existing logs directory.
+2026-02-18 13:53:06 EST MainProcess INFO [__main__] Processing a total of 1 jobs
+2026-02-18 13:53:06 EST MainProcess INFO [__main__] Starting pool with 1 worker(s)
+2026-02-18 13:53:32 EST ForkPoolWorker-1 INFO [numexpr.utils] Note: NumExpr detected 48 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-02-18 13:53:32 EST ForkPoolWorker-1 INFO [numexpr.utils] NumExpr defaulting to 8 threads.
+2026-02-18 15:02:46 EST ForkPoolWorker-1 INFO [__main__] Output: 0.2_relaxed_wt_1_A27K_A31D_A34N_A36N_A73L_B54L_B57N_rep1.pdb
+2026-02-18 15:02:47 EST MainProcess INFO [__main__] Script execution completed

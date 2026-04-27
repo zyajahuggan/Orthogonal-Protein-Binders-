@@ -1,0 +1,4 @@
+/var/spool/slurmd/job1340101/slurm_script: line 18: /scratch4/jgray21/zhuggan1/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CondaError: Run 'conda init' before 'conda activate'
+

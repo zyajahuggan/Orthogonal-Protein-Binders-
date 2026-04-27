@@ -1,0 +1,49 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+        <ScoreFunction name="ref15" weights="ref2015"/>
+        <ScoreFunction name="ref15_cst" weights="ref2015">
+        </ScoreFunction>
+    </SCOREFXNS>
+
+    <RESIDUE_SELECTORS>
+        <True name="all" />
+    </RESIDUE_SELECTORS>
+
+    <TASKOPERATIONS>
+        <InitializeFromCommandline name="init" />
+        <IncludeCurrent name="current" />
+        <LimitAromaChi2 name="limitchi2" chi2max="110" chi2min="70" include_trp="True" />
+        <ExtraRotamersGeneric name="ex1_ex2" ex1="1" ex2="1" />
+        <OperateOnResidueSubset name="restrict2repacking" selector="all">
+            <RestrictToRepackingRLT/>
+        </OperateOnResidueSubset>
+    </TASKOPERATIONS>
+
+    <MOVERS>
+        <FastRelax name="FastRelax" scorefxn="ref15" 
+            cartesian="false" bondangle="false" bondlength="false" 
+            min_type="dfpmin_armijo_nonmonotone" 
+            task_operations="init,current,ex1_ex2,limitchi2,restrict2repacking" 
+            relaxscript="InterfaceDesign2019" 
+            repeats="5"> #ramp_down_constraints="1"
+            <MoveMap name="MM" >
+                <Chain number="1" chi="true" bb="true" /> <!-- chain A (Ligand) -->
+                <Chain number="2" chi="true" bb="true" /> <!-- chain B (Ligand) -->
+                <Chain number="3" chi="true" bb="true" /> <!-- chain Y (Receptor) -->
+                <Chain number="4" chi="true" bb="true" /> <!-- chain Y (Receptor) -->
+                <Jump number="1" setting="true" /> <!-- Jump between A/B -->
+                <Jump number="2" setting="true" /> <!-- Jump between A/B and Y -->
+                <Jump number="3" setting="true" /> <!-- Jump between A/B and X -->
+            </MoveMap>
+        </FastRelax>
+    </MOVERS>
+
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+
+    <PROTOCOLS>
+        <Add mover="FastRelax"/>
+    </PROTOCOLS>
+
+    <OUTPUT scorefxn="ref15"/>
+</ROSETTASCRIPTS>

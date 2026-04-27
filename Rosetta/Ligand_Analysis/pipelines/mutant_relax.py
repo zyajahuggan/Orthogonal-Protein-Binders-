@@ -160,10 +160,10 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_pdb", type=str,
-                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/input/5repeats_5_wt/relaxed_wt_1.pdb') #average pdb 
+                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_ortho/relaxed_ortho_3.pdb') #average pdb 
     parser.add_argument("--in_csv", type=str,
-                        default='/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_list.csv')
-    parser.add_argument("--out_dir", type=str, default="/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/output/relaxed_wt_1pdbs" ,help="Output directory.")
+                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_list.csv')
+    parser.add_argument("--out_dir", type=str, default="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/interface_relax/output/relaxed_ortho_3pdbs" ,help="Output directory.")
     parser.add_argument("--nstruct", type=int, default=5,help="Number of relax runs per structure")
     parser.add_argument("--debug", action="store_true", help="Show full traceback on error (for debugging)")
     args = parser.parse_args()

@@ -1,0 +1,88 @@
+/home/zhuggan1/scr4_jgray21/zhuggan1/miniconda3/envs/mpnn/bin/python
+Torch loaded: 2.1.1+cu118
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+discarded {'bad_chars': 0, 'too_long': 0, 'bad_seq_length': 0}
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+Calculating conditional probabilities for merged_tetramer_ignorechain
+
+Top tied mutations (A + B view):
+A:T18V	B:T215V	logit=-0.401
+A:N55S	B:N252S	logit=-0.488
+A:N54V	B:N251V	logit=-0.813
+A:E100V	B:E297V	logit=-1.288
+A:V102I	B:V299I	logit=-1.559
+
+Top tied mutations (C + D view):
+C:V218L	D:V491L	logit=-0.478
+C:K191R	D:K464R	logit=-0.607
+C:S180T	D:S453T	logit=-0.660
+C:T42V	D:T315V	logit=-0.695
+C:N51P	D:N324P	logit=-0.937
+
+Top tied mutations (A + B view):
+A:T18V	B:T215V	logit=-0.376
+A:N55S	B:N252S	logit=-0.566
+A:N54V	B:N251V	logit=-0.807
+A:E100V	B:E297V	logit=-1.302
+A:N57R	B:N254R	logit=-1.564
+
+Top tied mutations (C + D view):
+C:K191R	D:K464R	logit=-0.472
+C:V218L	D:V491L	logit=-0.490
+C:S180T	D:S453T	logit=-0.683
+C:T42V	D:T315V	logit=-0.726
+C:S89A	D:S362A	logit=-0.890
+
+Top tied mutations (A + B view):
+A:T18V	B:T215V	logit=-0.375
+A:N55S	B:N252S	logit=-0.482
+A:N54V	B:N251V	logit=-0.791
+A:E100V	B:E297V	logit=-1.227
+A:V102I	B:V299I	logit=-1.527
+
+Top tied mutations (C + D view):
+C:V218L	D:V491L	logit=-0.417
+C:K191R	D:K464R	logit=-0.477
+C:S180T	D:S453T	logit=-0.631
+C:N51P	D:N324P	logit=-0.750
+C:T42V	D:T315V	logit=-0.756
+
+Top tied mutations (A + B view):
+A:T18V	B:T215V	logit=-0.325
+A:N55S	B:N252S	logit=-0.546
+A:N54V	B:N251V	logit=-0.821
+A:E100V	B:E297V	logit=-1.180
+A:N54I	B:N251I	logit=-1.433
+
+Top tied mutations (C + D view):
+C:V218L	D:V491L	logit=-0.405
+C:K191R	D:K464R	logit=-0.571
+C:S180T	D:S453T	logit=-0.637
+C:T42V	D:T315V	logit=-0.706
+C:N51P	D:N324P	logit=-0.824
+
+Top tied mutations (A + B view):
+A:T18V	B:T215V	logit=-0.427
+A:N55S	B:N252S	logit=-0.488
+A:N54V	B:N251V	logit=-0.828
+A:E100V	B:E297V	logit=-1.287
+A:V102I	B:V299I	logit=-1.505
+
+Top tied mutations (C + D view):
+C:V218L	D:V491L	logit=-0.481
+C:K191R	D:K464R	logit=-0.585
+C:S180T	D:S453T	logit=-0.670
+C:T42V	D:T315V	logit=-0.675
+C:N51P	D:N324P	logit=-0.788
+Counter({'A:T18V': 5, 'A:N55S': 5, 'A:N54V': 5, 'A:E100V': 5, 'A:V102I': 3, 'A:N57R': 1, 'A:N54I': 1})
+Counter({'C:V218L': 5, 'C:K191R': 5, 'C:S180T': 5, 'C:T42V': 5, 'C:N51P': 4, 'C:S89A': 1})

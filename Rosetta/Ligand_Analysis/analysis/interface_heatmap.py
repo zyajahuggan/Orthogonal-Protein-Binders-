@@ -75,17 +75,11 @@ def build_ddg_array(df, residues_chainpos, amino_acid, col_idx, row_idx, col_nam
 def plot_triangle_on_ax(ax, bottom_array, top_array, residues_chainpos,
                         wt_labels, amino_acid,
                         norm_red, cmap_red,
-                        norm_blue, cmap_blue, threshold=1.5):
-    mean_ablation = np.nanmean(np.abs(bottom_array), axis=0)
-    mean_enrichment = np.nanmean(-np.clip(top_array), axis=0)
+                        norm_blue, cmap_blue):
 
-    # Keep residues where *either* ablation or enrichment avg ≥ threshold
-    keep_cols = (mean_ablation >= threshold) | (mean_enrichment >= threshold)
+    # Keep ALL residues (no thresholding)
+    keep_cols = np.ones(len(residues_chainpos), dtype=bool)
 
-    if not np.any(keep_cols):
-        print(f"[Warning] No residues passed the threshold = {threshold}")
-        return
-    # Filter data + labels
     bottom_array = bottom_array[:, keep_cols]
     top_array = top_array[:, keep_cols]
     residues_chainpos = np.array(residues_chainpos)[keep_cols]
@@ -204,21 +198,25 @@ def plot_split_heatmaps(raw_A, raw_B, residues_A, wt_labels_A,
     axes = [axA, axB]
 
     # --- Colormaps ---
-    cmap_red  = plt.get_cmap("Reds").copy()
-    cmap_blue = plt.get_cmap("Blues_r").copy()
-    cmap_red.set_bad("white")
-    cmap_blue.set_bad("white")
+    from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 
-    # --- Ranges ---
-    ranges = {
-        "ddG_interface": {"red": (0, 5),  "blue": (-5, 0)},
-        "ddG_complex":   {"red": (0, 5),  "blue": (-5, 0)},
-        "ddG_receptor":  {"red": (0, 5),  "blue": (-5, 0)},
-    }
-    rmin, rmax = ranges[energy_term]["red"]
-    bmin, bmax = ranges[energy_term]["blue"]
-    norm_red  = plt.Normalize(vmin=rmin, vmax=rmax)
-    norm_blue = plt.Normalize(vmin=bmin, vmax=bmax)
+    # WT: stabilizing = green, neutral = white, destabilizing = red
+    cmap_red = LinearSegmentedColormap.from_list(
+        "wt_map",
+        ["#b59f00", "white", "red"]
+    )
+
+    # ORTHO: favorable = blue, neutral = white, wrong-way = green
+    cmap_blue = LinearSegmentedColormap.from_list(
+        "ortho_map",
+        ["blue", "white", "#b59f00"]
+    )
+
+    cmap_red.set_bad("lightgray")
+    cmap_blue.set_bad("lightgray")
+
+    norm_red = TwoSlopeNorm(vmin=-8, vcenter=0, vmax=8)
+    norm_blue = TwoSlopeNorm(vmin=-8, vcenter=0, vmax=8)
 
     # --- Draw Chain A ---
     plot_triangle_on_ax(axA, raw_A, raw_B, residues_A, wt_labels_A,
@@ -286,8 +284,8 @@ if __name__ == "__main__":
     amino_acid = ['G','A','V','L','I','M','S','T','C','P','N',
                   'Q','F','Y','W','H','K','R','D','E']
 
-    df_wt    = load_sc_file("/scratch/jgray21/zyhuggan/Ortho_BB/score_files/relaxed_wt_1.sc")
-    df_ortho = load_sc_file("/scratch/jgray21/zyhuggan/Ortho_BB/score_files/relaxed_ortho_3.sc")
+    df_wt    = load_sc_file("/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/interface_relax/score_files/relaxed_wt_1.sc")
+    df_ortho = load_sc_file("/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/interface_relax/score_files/relaxed_ortho_3.sc")
     
     residues_chainpos = sorted(
         [r for r in df_wt["residue"].unique() if r != "WT"],
@@ -301,8 +299,8 @@ if __name__ == "__main__":
     col_idx_B = {r: j for j, r in enumerate(residues_B)}
     row_idx   = {aa: i for i, aa in enumerate(amino_acid)}
 
-    _, wt_labels_A = get_wt_map_and_labels("/scratch/jgray21/zyhuggan/Ortho_BB/structures/5repeats_5_wt/relaxed_wt_1.pdb", residues_A)
-    _, wt_labels_B = get_wt_map_and_labels("/scratch/jgray21/zyhuggan/Ortho_BB/structures/5repeats_5_wt/relaxed_wt_1.pdb", residues_B)
+    _, wt_labels_A = get_wt_map_and_labels("/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_wt_1.pdb", residues_A)
+    _, wt_labels_B = get_wt_map_and_labels("/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_wt_1.pdb", residues_B)
 
     # --- Interface ddG arrays ---
     wt_array_A    = build_ddg_array(df_wt, residues_A, amino_acid, col_idx_A, row_idx, "ddG_interface")

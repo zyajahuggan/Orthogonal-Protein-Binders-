@@ -1,0 +1,2 @@
+/var/spool/slurmd/job1339940/slurm_script: line 18: /scratch4/jgray21/zhuggan1/miniconda3/etc/profile.d/conda.sh: No such file or directory
+slurmstepd: error: *** JOB 1339940 ON cpu074 CANCELLED AT 2026-04-23T12:55:24 ***

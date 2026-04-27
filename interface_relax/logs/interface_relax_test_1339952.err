@@ -1,0 +1,36 @@
+/var/spool/slurmd/job1339952/slurm_script: line 18: /scratch4/jgray21/zhuggan1/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CondaError: Run 'conda init' before 'conda activate'
+
+Traceback (most recent call last):
+  File "/weka/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_relax.py", line 194, in <module>
+    main()
+    ~~~~^^
+  File "/weka/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_relax.py", line 184, in main
+    job_list = job_list_creator(ARGS)
+  File "/weka/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_relax.py", line 139, in job_list_creator
+    df = pd.read_csv(args.in_csv)
+  File "/home/zyhuggan/miniconda3/envs/pyrosetta/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/zyhuggan/miniconda3/envs/pyrosetta/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/zyhuggan/miniconda3/envs/pyrosetta/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/zyhuggan/miniconda3/envs/pyrosetta/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zyhuggan/miniconda3/envs/pyrosetta/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/pipelines/mutant_list.csv'

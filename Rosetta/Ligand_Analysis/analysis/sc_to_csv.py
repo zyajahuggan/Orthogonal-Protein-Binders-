@@ -3,7 +3,7 @@ import pandas as pd
 import sys
 import os
 
-def convert_sc_to_csv(sc_file, outdir="/scratch/jgray21/zyhuggan/Ortho_BB/csv_files"):
+def convert_sc_to_csv(sc_file, outdir="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/interface_relax/csv_files"):
     """
     Converts a Rosetta .sc scorefile to a clean .csv file.
     Outputs the CSV to the specified directory (default: 'csvs/').

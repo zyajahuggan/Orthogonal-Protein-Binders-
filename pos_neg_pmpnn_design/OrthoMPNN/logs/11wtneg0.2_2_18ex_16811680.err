@@ -1,0 +1,3 @@
+
+ERROR: Cannot open file "/scratch4/jgray21/zhuggan1/Orthogonal-Protein-Binders-/Rosetta/Ligand_Analysis/input/5repeats_5_wt/relaxed_ortho_3.pdb"
+ERROR:: Exit from: /home/benchmark/rosetta/source/src/core/import_pose/import_pose.cc line: 361

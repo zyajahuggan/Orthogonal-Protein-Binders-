@@ -4,7 +4,7 @@ import os
 import re
 import sys
 
-def average_replicates(csv_file, outdir="/scratch/jgray21/zyhuggan/Ortho_BB/csv_files"):
+def average_replicates(csv_file, outdir="/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/interface_relax/csv_files"):
     """
     For each unique mutation (e.g., A_81_R), average across its 5 replicates.
     Example filenames: relaxed_wt_1_A_81_R_rep1.pdb ... rep5.pdb

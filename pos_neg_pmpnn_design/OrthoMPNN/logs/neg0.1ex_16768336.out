@@ -1,0 +1,13 @@
+Using existing logs directory.
+2026-02-15 16:03:29 EST MainProcess INFO [__main__] Processing a total of 1 jobs
+2026-02-15 16:03:29 EST MainProcess INFO [__main__] Starting pool with 48 worker(s)
+2026-02-15 16:04:10 EST ForkPoolWorker-33 INFO [numexpr.utils] Note: NumExpr detected 48 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-02-15 16:04:10 EST ForkPoolWorker-33 INFO [numexpr.utils] NumExpr defaulting to 8 threads.
+2026-02-15 16:04:57 EST ForkPoolWorker-33 ERROR [__main__] Failed trying to generate /scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/output_pdbs/pmnn_ortho/neg1/relaxed_ortho_3_A27V_A31L_A34W_A36G_A73Q_B54C_B57G_rep1.pdb with error: 
+
+File: /home/benchmark/rosetta/source/src/core/select/residue_selector/ChainSelector.cc:158
+[ ERROR ] UtilityExitException
+ERROR: Assertion `chain_index <= pose.conformation().num_chains()` failed.
+
+
+2026-02-15 16:04:57 EST MainProcess INFO [__main__] Script execution completed

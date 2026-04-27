@@ -1,0 +1,62 @@
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/bin/python
+----------------------------------------
+fixed_positions_jsonl is NOT loaded
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+discarded {'bad_chars': 0, 'too_long': 0, 'bad_seq_length': 0}
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+[DBG] first_global C = 194
+[DBG] residue_idx C first 5 = [394, 395, 396, 397, 398]
+Calculating conditional probabilities for merged_tetramer_ignorechain
+[DBG] Forcing chain_M=1.0 on chain K at 273 positions
+[DBG] Forcing chain_M=1.0 on chain L at 273 positions
+[DBG] Forcing chain_M=1.0 on chain E at 97 positions
+[DBG] Forcing chain_M=1.0 on chain F at 97 positions
+
+[DBG] design mask summary for selected chains:
+  C: len=273, min(mask)=1.0, max(mask)=1.0, first5=[1.0, 1.0, 1.0, 1.0, 1.0]
+  D: len=273, min(mask)=1.0, max(mask)=1.0, first5=[1.0, 1.0, 1.0, 1.0, 1.0]
+  K: len=273, min(mask)=1.0, max(mask)=1.0, first5=[1.0, 1.0, 1.0, 1.0, 1.0]
+  L: len=273, min(mask)=1.0, max(mask)=1.0, first5=[1.0, 1.0, 1.0, 1.0, 1.0]
+
+[DBG] designed chains: {'merged_tetramer_ignorechain': [['A', 'B', 'C', 'D', 'E', 'F', 'K', 'L'], ['G', 'H', 'I', 'J']]}
+[DBG] pdb_start: {'A': 1, 'B': 98, 'C': 195, 'D': 468, 'E': 741, 'F': 838, 'K': 1675, 'L': 1948}
+
+[CHECK] interface_globals sample:
+[15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+
+[CHECK] C locals: [93, 94, 95, 96, 97, 98, 99, 100, 101, 123, 124, 125, 145, 146, 147, 148, 166, 167, 168, 169]
+total C local sites: 43
+
+Top mutations (A/B view):
+A:S21T {'count': 949, 'best_delta': -0.31476616859436035, 'best_corr_logp': -2.959233283996582, 'wt_logp': -2.6412200927734375}
+A:R74Q {'count': 910, 'best_delta': -0.3329811096191406, 'best_corr_logp': -6.236086845397949, 'wt_logp': -5.944599151611328}
+A:V73L {'count': 817, 'best_delta': -0.3273887634277344, 'best_corr_logp': -7.2361531257629395, 'wt_logp': -6.840951919555664}
+A:E19K {'count': 803, 'best_delta': -0.337465763092041, 'best_corr_logp': -4.461200714111328, 'wt_logp': -4.3122239112854}
+A:K81S {'count': 788, 'best_delta': -0.2717409133911133, 'best_corr_logp': -5.185192584991455, 'wt_logp': -5.100275993347168}
+A:W35F {'count': 729, 'best_delta': -0.40407586097717285, 'best_corr_logp': -2.660461902618408, 'wt_logp': -2.3830416202545166}
+A:F18R {'count': 597, 'best_delta': -0.4270191192626953, 'best_corr_logp': -4.321142196655273, 'wt_logp': -4.2576422691345215}
+A:R23K {'count': 578, 'best_delta': -0.35680484771728516, 'best_corr_logp': -5.449692726135254, 'wt_logp': -4.88126277923584}
+A:I72V {'count': 523, 'best_delta': -0.3573415279388428, 'best_corr_logp': -4.469383716583252, 'wt_logp': -3.8225951194763184}
+A:K80S {'count': 481, 'best_delta': -0.3446953296661377, 'best_corr_logp': -3.15452241897583, 'wt_logp': -3.1023521423339844}
+
+Top mutations (C/D view):
+C:D422Q {'count': 938, 'best_delta': -0.3457961082458496, 'best_corr_logp': -6.244208335876465, 'wt_logp': -5.9218597412109375}
+C:K319Q {'count': 782, 'best_delta': -0.19735050201416016, 'best_corr_logp': -6.7807722091674805, 'wt_logp': -6.684043884277344}
+C:A287P {'count': 740, 'best_delta': -0.25789594650268555, 'best_corr_logp': -8.016761779785156, 'wt_logp': -7.5462751388549805}
+C:L421V {'count': 588, 'best_delta': -0.1639876365661621, 'best_corr_logp': -7.5977654457092285, 'wt_logp': -7.273835182189941}
+C:D418E {'count': 577, 'best_delta': -0.19130945205688477, 'best_corr_logp': -3.2177109718322754, 'wt_logp': -3.136575222015381}
+C:Y362I {'count': 567, 'best_delta': -0.41817235946655273, 'best_corr_logp': -3.660658359527588, 'wt_logp': -3.217641830444336}
+C:H426M {'count': 566, 'best_delta': -0.3128972053527832, 'best_corr_logp': -8.000011444091797, 'wt_logp': -7.718743324279785}
+C:V416E {'count': 559, 'best_delta': -0.15205001831054688, 'best_corr_logp': -3.647836685180664, 'wt_logp': -3.5491628646850586}
+C:M423P {'count': 535, 'best_delta': -0.08842086791992188, 'best_corr_logp': -8.883848190307617, 'wt_logp': -8.751379013061523}
+C:L290Q {'count': 445, 'best_delta': -0.42354297637939453, 'best_corr_logp': -5.809088706970215, 'wt_logp': -5.0547590255737305}
