@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/weka/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/Rosetta/pipelines/reference_structures.py", line 8, in <module>
+    import pyrosetta
+ModuleNotFoundError: No module named 'pyrosetta'

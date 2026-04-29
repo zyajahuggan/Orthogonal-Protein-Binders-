@@ -1,0 +1,26 @@
+2026-04-27 12:21:03 EDT ForkPoolWorker-1 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-1 DEBUG [root] Cloning poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-1 DEBUG [root] Applying Relax...
+2026-04-27 12:21:03 EDT ForkPoolWorker-3 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-3 DEBUG [root] Cloning poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-2 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-2 DEBUG [root] Cloning poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-3 DEBUG [root] Applying Relax...
+2026-04-27 12:21:03 EDT ForkPoolWorker-2 DEBUG [root] Applying Relax...
+2026-04-27 12:21:03 EDT ForkPoolWorker-4 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-4 DEBUG [root] Cloning poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-4 DEBUG [root] Applying Relax...
+2026-04-27 12:21:03 EDT ForkPoolWorker-5 DEBUG [root] Worker initialized with WT + Ortho poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-5 DEBUG [root] Cloning poses
+2026-04-27 12:21:03 EDT ForkPoolWorker-5 DEBUG [root] Applying Relax...
+2026-04-27 12:47:07 EDT ForkPoolWorker-2 DEBUG [root] Done...Dumping Now
+2026-04-27 12:47:07 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/rosetta_outputs/r1/A49V_A52R_A68L_B49V_B52R_B68L/relaxed_reference_3.pdb
+2026-04-27 12:47:49 EDT ForkPoolWorker-4 DEBUG [root] Done...Dumping Now
+2026-04-27 12:47:49 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/rosetta_outputs/r1/A49V_A52R_A68L_B49V_B52R_B68L/relaxed_reference_4.pdb
+2026-04-27 12:48:54 EDT ForkPoolWorker-5 DEBUG [root] Done...Dumping Now
+2026-04-27 12:48:54 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/rosetta_outputs/r1/A49V_A52R_A68L_B49V_B52R_B68L/relaxed_reference_5.pdb
+2026-04-27 12:48:55 EDT ForkPoolWorker-3 DEBUG [root] Done...Dumping Now
+2026-04-27 12:48:56 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/rosetta_outputs/r1/A49V_A52R_A68L_B49V_B52R_B68L/relaxed_reference_2.pdb
+2026-04-27 12:48:57 EDT ForkPoolWorker-1 DEBUG [root] Done...Dumping Now
+2026-04-27 12:48:57 EDT MainProcess INFO [root] Finished /scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/rosetta_outputs/r1/A49V_A52R_A68L_B49V_B52R_B68L/relaxed_reference_1.pdb
+2026-04-27 12:48:57 EDT MainProcess INFO [root] Script execution completed
