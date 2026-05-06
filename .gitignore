@@ -1,0 +1,12 @@
+# Python cache
+*.pyc
+*.pyo
+__pycache__/
+
+# Log files
+*.err
+*.out
+logs/
+
+# OS files
+.DS_Store
