@@ -76,9 +76,9 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--ortho_pdb", type=str, required=False,
-                        default='/scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/3mjg.clean.pdb')
+                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/input/abcd_complex.pdb')
     parser.add_argument("--out_ortho", type=str, required=False,
-                        default='/scratch4/jgray21/zhuggan1/projects/orthosystems/tryingggg/pos_neg_design/OrthoMPNN/Rosetta/',
+                        default='/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/output/',
                         help="Output dir for Ortho")
     parser.add_argument("--nstruct", type=int, default=5,
                         help="Number of relax runs per structure")
