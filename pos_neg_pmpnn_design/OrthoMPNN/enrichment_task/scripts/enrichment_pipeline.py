@@ -69,7 +69,7 @@ CONFIG = dict(
 
     # Rosetta params
     nstruct          = 5,
-    ref_dG           = -114.8745630944571,  # avg_dG_interface from reference_scores.csv
+    ref_dG           = -114.955,  # avg_dG_interface from reference_scores.csv
 
     # Pipeline params
     max_rounds       = 5,
