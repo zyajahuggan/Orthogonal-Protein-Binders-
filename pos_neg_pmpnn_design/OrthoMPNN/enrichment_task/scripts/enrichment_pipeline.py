@@ -3,20 +3,14 @@
 Automated iterative MPNN + Rosetta enrichment pipeline.
 
 Each round:
-  1. Run ProteinMPNN on input pdbs (round 1: abcd_complex, subsequent rounds: passing pdbs)
-  2. Parse .fa output -> apply mutations to ABCD complex -> save mutant pdbs
-  3. Relax mutant pdbs (nstruct replicates each)
-  4. Score AB_C interface -> filter ddG < threshold
-  5. Copy passing rep1 pdbs -> input for next round
+  1. Run ProteinMPNN on input pdbs
+  2. Parse .fa output -> compare each sequence's MPNN score to the WT score
+     from that same .fa file (lower = better in MPNN log-prob scoring)
+  3. Keep sequences that are better than WT
+  4. Apply mutations to ABCD complex -> relax mutant pdbs
+  5. Pass relaxed pdbs as input for next round
 
-Stops after max_rounds or if 0 designs pass in a round.
-
-NOTE: Before running, extract the 4-chain ABCD structure from the 8-chain file:
-  grep "^ATOM\|^HETATM" triple_renumbered.pdb | awk '$5=="A"||$5=="B"||$5=="C"||$5=="D"' > abcd_complex.pdb
-  echo "END" >> abcd_complex.pdb
-  mv abcd_complex.pdb <base_dir>/input/abcd_complex.pdb
-  mkdir -p <base_dir>/input/abcd_input
-  cp <base_dir>/input/abcd_complex.pdb <base_dir>/input/abcd_input/
+Stops after max_rounds or if 0 sequences beat WT score in a round.
 """
 import os
 import re
@@ -28,8 +22,7 @@ from collections import defaultdict
 from multiprocessing import Pool
 
 import pyrosetta
-from pyrosetta import pose_from_pdb, create_score_function
-from pyrosetta.rosetta.protocols.analysis import InterfaceAnalyzerMover
+from pyrosetta import pose_from_pdb
 from pyrosetta.rosetta.protocols.constraint_movers import ClearConstraintsMover
 from pyrosetta.rosetta.protocols.simple_moves import MutateResidue
 from pyrosetta.rosetta.protocols.rosetta_scripts import XmlObjects
@@ -43,13 +36,8 @@ BASE = "/home/zhuggan1/scr4_jgray21/zhuggan1/Orthogonal-Protein-Binders-/pos_neg
 CONFIG = dict(
     # Paths
     base_dir        = f"{BASE}/OrthoMPNN/enrichment_task",
-
-    # 4-chain ABCD structure for mutation application and MPNN input
     abcd_pdb        = f"{BASE}/OrthoMPNN/enrichment_task/input/abcd_complex.pdb",
-
-    # Folder containing just abcd_complex.pdb for MPNN round 1 input
-    initial_input = f"{BASE}/OrthoMPNN/enrichment_task/input",
-
+    initial_input   = f"{BASE}/OrthoMPNN/enrichment_task/input",
     relax_xml       = f"{BASE}/OrthoMPNN/Rosetta/pipelines/reference_structures.xml",
 
     # ProteinMPNN paths
@@ -67,13 +55,11 @@ CONFIG = dict(
     num_seq          = 100,
     sampling_temp    = 0.1,
 
-    # Rosetta params
+    # Rosetta params (relax only, no scoring filter)
     nstruct          = 5,
-    ref_dG           = -114.955,  # avg_dG_interface from reference_scores.csv
 
     # Pipeline params
     max_rounds       = 5,
-    ddg_threshold    = -1.0,
     n_workers        = int(os.environ.get("SLURM_CPUS_PER_TASK", os.cpu_count() or 1)),
 )
 
@@ -142,14 +128,23 @@ def run_mpnn(input_pdb_dir, round_dir, cfg):
 
 
 # ============================================================
-# STEP 2 — Parse .fa and apply mutations
+# STEP 2 — Parse .fa and filter by MPNN score
 # ============================================================
 def parse_fa(fa_path):
-    samples = []
+    """
+    Parse .fa file. Returns:
+      wt_score  : float  — score of the first (WT/reference) sequence
+      wt_A, wt_B: str   — WT sequences for chains A and B
+      samples   : list of dicts with keys: sample, score, seq_A, seq_B
+    """
+    samples  = []
+    wt_score = None
     wt_A = wt_B = None
+
     with open(fa_path) as f:
         lines = [l.strip() for l in f if l.strip()]
-    i = 0
+
+    i     = 0
     first = True
     while i < len(lines):
         if lines[i].startswith('>'):
@@ -159,21 +154,28 @@ def parse_fa(fa_path):
             parts = seq_line.split('/')
             seq_A = parts[0] if len(parts) > 0 else ""
             seq_B = parts[1] if len(parts) > 1 else ""
+
+            score_match = re.search(r'score=([\d.]+)', header)
+            score = float(score_match.group(1)) if score_match else None
+
             if first:
+                # First entry is always the WT/reference sequence
+                wt_score = score
                 wt_A, wt_B = seq_A, seq_B
                 first = False
+                print(f"[FILTER] WT MPNN score = {wt_score:.4f}")
             else:
                 sample_match = re.search(r'sample=(\d+)', header)
-                score_match  = re.search(r'score=([\d.]+)', header)
                 samples.append({
                     'sample': int(sample_match.group(1)) if sample_match else -1,
-                    'score':  float(score_match.group(1)) if score_match else None,
+                    'score':  score,
                     'seq_A':  seq_A,
                     'seq_B':  seq_B,
                 })
         else:
             i += 1
-    return wt_A, wt_B, samples
+
+    return wt_score, wt_A, wt_B, samples
 
 
 def get_mutations(wt_seq, mut_seq, chain):
@@ -188,41 +190,62 @@ def mutation_label(mutations):
     return '_'.join(f"{c}{r}{AA3_TO_AA1[a]}" for c, r, a in mutations)
 
 
-def apply_mutations_to_pose(pose, mutations):
-    for chain, resnum, aa3 in mutations:
-        pose_res = pose.pdb_info().pdb2pose(chain, resnum)
-        if pose_res == 0:
-            raise ValueError(f"Residue {chain}{resnum} not found.")
-        MutateResidue(pose_res, aa3).apply(pose)
-
-
-def build_mutant_pdbs(fa_path, abcd_pdb, mutant_pdb_dir):
-    print(f"\n[MUTATE] Parsing {fa_path}")
+def filter_and_build_mutants(fa_path, abcd_pdb, mutant_pdb_dir, round_dir):
+    """
+    Parse .fa, keep sequences with MPNN score < WT score,
+    apply mutations to ABCD complex, save mutant PDBs.
+    Returns number of passing sequences saved.
+    """
+    print(f"\n[FILTER] Parsing {fa_path}")
     os.makedirs(mutant_pdb_dir, exist_ok=True)
 
-    wt_A, wt_B, samples = parse_fa(fa_path)
-    profile_to_mutations = {}
-    profile_to_samples   = defaultdict(list)
+    wt_score, wt_A, wt_B, samples = parse_fa(fa_path)
 
-    for s in samples:
+    # Filter: lower MPNN score = better (log-prob, less negative = better fit)
+    passing = [s for s in samples if s['score'] is not None and s['score'] < wt_score]
+    print(f"[FILTER] {len(passing)}/{len(samples)} sequences beat WT score ({wt_score:.4f})")
+
+    if not passing:
+        return 0
+
+    # Deduplicate by mutation profile
+    profile_to_best = {}
+    for s in passing:
         muts = get_mutations(wt_A, s['seq_A'], 'A') + get_mutations(wt_B, s['seq_B'], 'B')
         key  = mutation_label(muts) if muts else "WT"
-        profile_to_mutations[key] = muts
-        profile_to_samples[key].append(s['sample'])
-
-    saved = 0
-    for key, muts in profile_to_mutations.items():
         if key == "WT":
             continue
+        # Keep best (lowest) score per unique mutation profile
+        if key not in profile_to_best or s['score'] < profile_to_best[key]['score']:
+            profile_to_best[key] = {'score': s['score'], 'muts': muts}
+
+    print(f"[FILTER] {len(profile_to_best)} unique mutation profile(s) after deduplication")
+
+    # Save scores CSV for this round
+    scores_csv = os.path.join(round_dir, "mpnn_scores.csv")
+    rows = [{"mutation": k, "mpnn_score": v['score'], "delta_score": v['score'] - wt_score}
+            for k, v in sorted(profile_to_best.items(), key=lambda x: x[1]['score'])]
+    pd.DataFrame(rows).to_csv(scores_csv, index=False)
+    print(f"[FILTER] Scores saved to {scores_csv}")
+
+    # Apply mutations and save PDBs
+    saved = 0
+    for key, info in profile_to_best.items():
         try:
             pose = pose_from_pdb(abcd_pdb)
-            apply_mutations_to_pose(pose, muts)
-            pose.dump_pdb(os.path.join(mutant_pdb_dir, f"{key}.pdb"))
+            for chain, resnum, aa3 in info['muts']:
+                pose_res = pose.pdb_info().pdb2pose(chain, resnum)
+                if pose_res == 0:
+                    raise ValueError(f"Residue {chain}{resnum} not found.")
+                MutateResidue(pose_res, aa3).apply(pose)
+            out_pdb = os.path.join(mutant_pdb_dir, f"{key}.pdb")
+            pose.dump_pdb(out_pdb)
             saved += 1
         except Exception as e:
             print(f"  ERROR on {key}: {e}")
 
-    print(f"[MUTATE] Saved {saved} mutant pdb(s) to {mutant_pdb_dir}")
+    print(f"[FILTER] Saved {saved} mutant pdb(s) to {mutant_pdb_dir}")
+    return saved
 
 
 # ============================================================
@@ -252,6 +275,10 @@ def relax_one(args):
 
 
 def relax_mutants(mutant_pdb_dir, relaxed_dir, relax_xml, nstruct, n_workers):
+    """
+    Relax each mutant PDB nstruct times. The best (lowest energy) replicate
+    per mutant is copied to relaxed_dir root as the representative for next round.
+    """
     print(f"\n[RELAX] Relaxing pdbs in {mutant_pdb_dir}")
     os.makedirs(relaxed_dir, exist_ok=True)
 
@@ -275,91 +302,26 @@ def relax_mutants(mutant_pdb_dir, relaxed_dir, relax_xml, nstruct, n_workers):
     print(f"[RELAX] Done.")
 
 
-# ============================================================
-# STEP 4 — Score and filter
-# ============================================================
-def init_score_worker():
-    pyrosetta.init("-mute all")
-
-
-def score_one(args):
-    pdb_path, mutation = args
-    try:
-        pose = pose_from_pdb(pdb_path)
-        ClearConstraintsMover().apply(pose)
-        scorefxn = create_score_function("ref2015")
-        iam = InterfaceAnalyzerMover("AB_C")
-        iam.set_scorefunction(scorefxn)
-        iam.set_pack_separated(True)
-        iam.set_pack_rounds(5)
-        iam.apply(pose)
-        dG      = iam.get_interface_dG()
-        fname   = os.path.basename(pdb_path)
-        rep     = re.search(r"_(\d+)\.pdb$", fname)
-        rep_num = int(rep.group(1)) if rep else -1
-        return {"mutation": mutation, "rep": rep_num, "description": fname, "dG_interface": dG}
-    except Exception as e:
-        print(f"  Skipping {pdb_path}: {e}")
-        return None
-
-
-def score_and_filter(relaxed_dir, ref_dG, out_csv, passing_dir, ddg_threshold, n_workers):
-    print(f"\n[SCORE] Scoring pdbs in {relaxed_dir}")
-    os.makedirs(os.path.dirname(out_csv), exist_ok=True)
+def collect_best_relaxed(relaxed_dir, passing_dir, cfg):
+    """
+    For each mutant, pick rep1 (consistent with original pipeline) and
+    copy to passing_dir so it can be fed into the next MPNN round.
+    """
     os.makedirs(passing_dir, exist_ok=True)
-
-    jobs = []
-    for mutation in sorted(os.listdir(relaxed_dir)):
-        subdir = os.path.join(relaxed_dir, mutation)
-        if not os.path.isdir(subdir):
-            continue
-        for fname in os.listdir(subdir):
-            if fname.endswith(".pdb"):
-                jobs.append((os.path.join(subdir, fname), mutation))
-
-    pyrosetta.init("-mute all", silent=True)
-    with Pool(processes=n_workers, initializer=init_score_worker) as pool:
-        raw = pool.map(score_one, jobs)
-
-    records = [r for r in raw if r is not None]
-    df = pd.DataFrame(records)
-
-    averaged = (
-        df.groupby("mutation")["dG_interface"]
-        .mean().reset_index()
-        .rename(columns={"dG_interface": "avg_dG_interface"})
-    )
-    averaged["ddG_interface"] = averaged["avg_dG_interface"] - ref_dG
-    rep_counts = (df.groupby("mutation")["rep"]
-                  .count().reset_index()
-                  .rename(columns={"rep": "n_reps"}))
-    rep1_df = (df[df["rep"] == 1][["mutation", "description"]]
-               .drop_duplicates("mutation"))
-    averaged = (averaged
-                .merge(rep_counts, on="mutation")
-                .merge(rep1_df, on="mutation", how="left")
-                .sort_values("ddG_interface"))
-    averaged.to_csv(out_csv, index=False)
-
-    print(averaged[["mutation", "avg_dG_interface", "ddG_interface", "n_reps"]].to_string(index=False))
-
-    passing = averaged[averaged["ddG_interface"] < ddg_threshold]
-    print(f"\n{len(passing)}/{len(averaged)} mutation(s) pass ddG < {ddg_threshold}")
+    scorefxn = None  # use rep1 for consistency; swap to energy-based if desired
 
     copied = 0
-    for _, row in passing.iterrows():
-        if pd.isna(row["description"]):
+    for mut_key in os.listdir(relaxed_dir):
+        sub_dir = os.path.join(relaxed_dir, mut_key)
+        if not os.path.isdir(sub_dir):
             continue
-        src = os.path.join(relaxed_dir, row["mutation"], row["description"])
-        dst = os.path.join(passing_dir, f"{row['mutation']}_rep1.pdb")
-        if os.path.exists(src):
-            shutil.copy(src, dst)
+        rep1 = os.path.join(sub_dir, "relaxed_1.pdb")
+        if os.path.exists(rep1):
+            dst = os.path.join(passing_dir, f"{mut_key}.pdb")
+            shutil.copy(rep1, dst)
             copied += 1
-            print(f"  PASS: {row['mutation']}  ddG={row['ddG_interface']:.3f}")
-        else:
-            print(f"  WARNING: {src} not found.")
 
-    print(f"[SCORE] {copied} passing pdb(s) copied to {passing_dir}")
+    print(f"[RELAX] {copied} representative pdb(s) copied to {passing_dir}")
     return copied
 
 
@@ -372,7 +334,6 @@ def main():
 
     pyrosetta.init("-mute all", silent=True)
 
-    # Round 1 starts from the abcd_input folder (contains just abcd_complex.pdb)
     current_input_dir = cfg["initial_input"]
 
     for rnd in range(1, cfg["max_rounds"] + 1):
@@ -383,34 +344,33 @@ def main():
         round_dir   = os.path.join(base_dir, "scripts",         f"r{rnd}")
         mutant_dir  = os.path.join(base_dir, "mutant_pdbs",     f"r{rnd}")
         relaxed_dir = os.path.join(base_dir, "rosetta_outputs", f"r{rnd}")
-        scores_dir  = os.path.join(base_dir, "rosetta_outputs", "scores")
         passing_dir = os.path.join(base_dir, "rosetta_outputs", f"passing_r{rnd}")
-        out_csv     = os.path.join(scores_dir, f"r{rnd}_mutant_scores.csv")
 
-        for d in [round_dir, mutant_dir, relaxed_dir, scores_dir, passing_dir]:
+        for d in [round_dir, mutant_dir, relaxed_dir, passing_dir]:
             os.makedirs(d, exist_ok=True)
 
-        # Step 1 — MPNN
+        # Step 1 — Run MPNN
         fa_path = run_mpnn(current_input_dir, round_dir, cfg)
 
-        # Step 2 — Apply mutations to ABCD complex
-        build_mutant_pdbs(fa_path, cfg["abcd_pdb"], mutant_dir)
-
-        # Step 3 — Relax
-        relax_mutants(mutant_dir, relaxed_dir, cfg["relax_xml"], cfg["nstruct"], cfg["n_workers"])
-
-        # Step 4 — Score + filter
-        n_passing = score_and_filter(
-            relaxed_dir, cfg["ref_dG"], out_csv, passing_dir,
-            cfg["ddg_threshold"], cfg["n_workers"]
-        )
+        # Step 2 — Filter by MPNN score vs WT, build mutant PDBs
+        n_passing = filter_and_build_mutants(fa_path, cfg["abcd_pdb"], mutant_dir, round_dir)
 
         if n_passing == 0:
-            print(f"\n[PIPELINE] 0 designs passed in round {rnd}. Stopping early.")
+            print(f"\n[PIPELINE] 0 sequences beat WT MPNN score in round {rnd}. Stopping early.")
+            break
+
+        # Step 3 — Relax passing mutants
+        relax_mutants(mutant_dir, relaxed_dir, cfg["relax_xml"], cfg["nstruct"], cfg["n_workers"])
+
+        # Step 4 — Collect rep1 relaxed structures for next round input
+        n_collected = collect_best_relaxed(relaxed_dir, passing_dir, cfg)
+
+        if n_collected == 0:
+            print(f"\n[PIPELINE] No relaxed pdbs collected in round {rnd}. Stopping early.")
             break
 
         current_input_dir = passing_dir
-        print(f"\n[PIPELINE] Round {rnd} complete. {n_passing} design(s) passing to round {rnd + 1}.")
+        print(f"\n[PIPELINE] Round {rnd} complete. {n_collected} structure(s) passing to round {rnd + 1}.")
 
     print("\n[PIPELINE] Enrichment complete.")
 

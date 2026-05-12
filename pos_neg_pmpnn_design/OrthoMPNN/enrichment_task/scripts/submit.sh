@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --job-name=enrichment_pipeline
+#SBATCH --job-name=enrichment_pipeline_bylogs
 #SBATCH --output=/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/logs/pipeline_%j.out
 #SBATCH --error=/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/pos_neg_pmpnn_design/OrthoMPNN/enrichment_task/logs/pipeline_%j.err
 #SBATCH --time=3-00:00:00
