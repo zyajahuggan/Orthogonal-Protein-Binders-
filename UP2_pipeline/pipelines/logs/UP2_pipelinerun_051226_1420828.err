@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/UP2_pipeline/pipelines/reference_structures.py", line 124, in <module>
+    main()
+    ~~~~^^
+  File "/scratch/jgray21/zyhuggan/Orthogonal-Protein-Binders-/UP2_pipeline/pipelines/reference_structures.py", line 107, in main
+    os.makedirs(args.out_wt, exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 218, in makedirs
+  File "<frozen os>", line 218, in makedirs
+  File "<frozen os>", line 218, in makedirs
+  [Previous line repeated 4 more times]
+  File "<frozen os>", line 228, in makedirs
+PermissionError: [Errno 13] Permission denied: '/scratch4'
