@@ -1,0 +1,57 @@
+import json
+import os
+from itertools import combinations_with_replacement
+
+# Define sequences
+proteins = {
+    "DHD150a": "PTDEVIEVLKELLRIHRENLRVNEEIVEVNERASRVTDREELERLLRRSNELIKRSRELNEESKKLIEKLERLAT",
+    "DHD150b" : "DNEEIIKEARRVVEEYKKAVDRLEELVRRAENAKHASEKELKDIVREILRISKELNKVSERLIELWERSQERAR", 
+    "DHD154a" : "TAEELLEVHKKSDRVTKEHLRVSEEILKVVEVLTRGEVSSEVLKRVLRKLEELTDKLRRVTEEQRRVVEKLN", 
+    "DHD154b" : "DLEDLLRRLRRLVDEQRRLVEELERVSRRLEKAVRDNEDERELARLSREHSDIQDKHDKLAREILEVLKRLLERTE",
+    "DHD155a" : "PEDDVVRIIKEDLESNREVLREQKEIHRILELVTRGEVSEEAIDRVLKRQEDLLKKQKESTDKARKVVEERR",
+    "DHD155b" : "DEVRLITEWLKLSEESTRLLKELVELTRLLRNNVPNVEEILREHERISRELERLSRRLKDLADKLERTRR", 
+    "DHD37_BBBBa" : "MDEEDHLKKLKTHLEKLERHLKLLEDHAKKLEDILKERPEDSAVKESIDELRRSIELVRESIEIFRQSVEEEE",
+    "DHD37_BBBBb" : "GDVKELTKILDTLTKILETATKVIKDATKLLEEHRKSDKPDPRLIETHKKLVEEHETLVRQHKELAEEHLKRTR",
+    "DHD37_ABXBa" : "DSDEHLKKLKTFLENLRRHLDRLDKHIKQLRDILSENPEDERVKDVIDLSERSVRIVKTVIKIFEDSVRKKE", 
+    "DHD37_ABXBb" : "GSDDKELDKLLDTLEKILQTATKIIDDANKLLEKLRRSERKDPKVVETYVELLKRHEKAVKELLEIAKTHAKKVE",
+    "DHD162a" : "SERELQRELNKIVRRILEIHREVSELHQRAVKLIRENDNSEELEEISRRIEELSKELEKLVREHDEIVKTIE",
+    "DHD162b" : "SEREKLDRNDEELKEINKRVEEIKERSDRITEAIEKNERSEEEIRRLSREQNEALQRLLELHKKLVKLHRELLEDTR",
+     "DHD6a" : "TEDEIRESLKWLDEVLQELREIARESNEVLERNRQKSRSDKLREDIERYKKRMEEARKKLDDQLNKYKKRMDENRS",
+     "DHD6b" : "TEEELKESKKFAEDLARSARRALKESKRVLEEISQASRSKKLEEIVRRYKEQVKRWQDEWDERAREYRKRMKENRS", 
+     "DHD13_XAAAa" : "GTKEDILERQRKIIERAQEIHRRQQEILEELERIIRKPGSSEEAMKRMLKLLEESLRLLKELLELSEESAQLLYEQR", 
+     "DHD13_XAAAb" : "GTEKRLLEEAERAHREQKEIIKKAQELHRRLEEIVRQSGSSEEAKKEAKKILEEIRELSKRSLELLREILYLSQEQKGSLVPR", 
+}
+from esm.sdk.forge import SequenceStructureForgeInferenceClient
+
+client = SequenceStructureForgeInferenceClient(model="esmfold2-fast-2026-05", url="https://biohub.ai", token="cbufford354")
+
+SEEDS = list(range(1, 251))  # adjust seeds (250)
+OUTPUT_DIR = "../inputs/dhd"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+for prot1, prot2 in combinations_with_replacement(proteins.keys(), 2):
+    name = f"{prot1}_vs_{prot2}"
+
+    # Handle homodimer — same sequence, use id: ["A", "B"]
+    if prot1 == prot2:
+        sequences = [{"protein": {"id": ["A", "B"], "sequence": proteins[prot1]}}]
+    else:
+        sequences = [
+            {"protein": {"id": ["A"], "sequence": proteins[prot1]}},
+            {"protein": {"id": ["B"], "sequence": proteins[prot2]}},
+        ]
+
+    job = {
+        "name": name,
+        "dialect": "alphafold3",
+        "version": 1,
+        "sequences": sequences,
+        "modelSeeds": SEEDS,
+    }
+
+    with open(f"{OUTPUT_DIR}/{name}.json", "w") as f:
+        json.dump(job, f, indent=4)
+
+    print(f"Created: {name}.json")
+
+print(f"\nTotal jobs: {sum(1 for _ in combinations_with_replacement(proteins, 2))}")

@@ -1,0 +1,13 @@
+# Large, regenerable model outputs -- not suitable for git/GitHub
+benchmark_orthog_prot/af3_benchmark/outputs/
+benchmark_orthog_prot/boltz_benchmark/
+benchmark_orthog_prot/chai_benchmark/
+benchmark_orthog_prot/esmfold2_benchmark/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Claude Code local config/notes -- not project code
+.claude/
+CLAUDE.local.md
