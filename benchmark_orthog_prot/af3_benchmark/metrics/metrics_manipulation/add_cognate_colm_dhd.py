@@ -6,18 +6,15 @@ import re
 
 metrics_path = Path(__file__).resolve().parent.parent / "dhd_metrics_af3_filtered.csv" 
 
-df = pd.read_csv(f"{metrics_path}")
+df = pd.read_csv(metrics_path)
 
-cognate_status = [] 
-counter = 0
+cognate_status = []
 pattern = re.compile(r"^(.+)(?:a_vs_\1b|b_vs_\1a)$")
 for job in df['sample']:
-    found = None
     found = pattern.search(job)
-    if found == None:
+    if found is None:
         cognate_status.append(0)
     else:
         cognate_status.append(1)
-        counter +=1
 df["cognate_interaction"] = cognate_status
-df.to_csv(f"{metrics_path}", index = False)
+df.to_csv(metrics_path, index = False)
