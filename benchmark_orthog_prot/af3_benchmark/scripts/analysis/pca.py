@@ -1,102 +1,94 @@
+"""PCA over the per-pair metrics: report the eigenvalues and how much variance each
+component explains, then check whether the dominant variance directions separate
+cognate from non-cognate pairs. Standardizes the metrics before decomposing, since
+they're on very different scales (e.g. pLDDT 0-100 vs PAE in Angstroms). Runs once
+per project (cross_docking and dhd)."""
+
+import numpy as np
 import pandas as pd
-import numpy as np
-from pathlib import Path
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import silhouette_score
-from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from pairing_utils import UNWANTED_COLUMNS, LOWER_IS_BETTER_COLUMNS, iter_datasets
 
-metrics_path = Path(__file__).resolve().parent.parent.parent / "metrics" / "dhd_metrics_af3_filtered.csv"
-df = pd.read_csv(metrics_path)
+MODEL_NAME = "AF3"
+ID_COL = "sample"
 
-csv_stem = metrics_path.stem
-project = "dhd" if "dhd" in csv_stem else "cross_docking"
-results_dir = metrics_path.parent.parent / "results" / project
-results_dir.mkdir(parents=True, exist_ok=True)
+for df, csv_stem, project, sep, results_dir in iter_datasets():
+    metric_columns = [c for c in df.columns if c not in UNWANTED_COLUMNS]
 
-pae_columns = ['chain_pair_pae_min_0_1', 'chain_pair_pae_min_1_0']
-unwanted_columns = ["sample", "best_seed", "best_sample", "cognate_interaction", "has_clash"]
+    # --- orient error-like metrics (lower-is-better -> higher-is-better) and standardize ---
+    data = df[metric_columns].copy()
+    for col in LOWER_IS_BETTER_COLUMNS:
+        if col in data.columns:
+            data[col] = -data[col]
+    data.index = df[ID_COL]
 
-metric_columns = [c for c in df.columns if c not in unwanted_columns]
+    X = StandardScaler().fit_transform(data.values)  # rows = pairs, columns = metrics
 
-data = df[metric_columns].copy()
-for col in pae_columns:
-    if col in data.columns:
-        data[col] = -data[col]
+    # --- eigen-decomposition of the covariance matrix across metrics ---
+    cov_matrix = np.cov(X, rowvar=False)   # rowvar=False: columns are the variables (metrics)
+    eigenvalues, eigenvectors = np.linalg.eigh(cov_matrix)
 
-data.index = df['sample']
+    # sort descending so PC1 is the highest-variance direction
+    sorted_idx = np.argsort(eigenvalues)[::-1]
+    eigenvalues = eigenvalues[sorted_idx]
+    eigenvectors = eigenvectors[:, sorted_idx]
+    explained_variance_ratio = eigenvalues / eigenvalues.sum()
 
-# --- standardize columns (metrics), since pairs are now rows ---
-X = StandardScaler().fit_transform(data.values)   # rows = pairs, columns = metrics
+    pc_scores = X @ eigenvectors[:, :2]
+    df['PC1'] = pc_scores[:, 0]
+    df['PC2'] = pc_scores[:, 1]
 
-# --- covariance matrix across metrics, using pairs as observations ---
-cov_matrix = np.cov(X, rowvar=False)   # rowvar=False tells numpy that columns are variables
+    # --- report eigenvalues / variance explained ---
+    variance_df = pd.DataFrame({
+        'component': [f'PC{i+1}' for i in range(len(eigenvalues))],
+        'eigenvalue': eigenvalues,
+        'explained_variance_ratio': explained_variance_ratio,
+        'cumulative_variance_ratio': np.cumsum(explained_variance_ratio),
+    })
+    variance_df.to_csv(results_dir / f"{csv_stem}_pca_variance.csv", index=False)
+    print(f"--- {project} ---")
+    print(variance_df.to_string(index=False))
 
-# --- eigen-decomposition ---
-eigenvalues, eigenvectors = np.linalg.eigh(cov_matrix)
+    # --- 1. scree plot: variance explained per component ---
+    plt.figure(figsize=(7, 5))
+    components = range(1, len(eigenvalues) + 1)
+    plt.bar(components, explained_variance_ratio, color='steelblue', label='Individual')
+    plt.plot(components, np.cumsum(explained_variance_ratio), color='darkorange', marker='o', label='Cumulative')
+    plt.xlabel("Principal Component")
+    plt.ylabel("Fraction of Variance Explained")
+    plt.title(f"Scree Plot — {MODEL_NAME} ({project})")
+    plt.xticks(components)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(results_dir / f"{csv_stem}_pca_scree.png", dpi=300)
+    plt.close()
 
-# sort descending
-sorted_idx = np.argsort(eigenvalues)[::-1]
-eigenvalues = eigenvalues[sorted_idx]
-eigenvectors = eigenvectors[:, sorted_idx]
+    # --- 2. PC1 vs PC2 scatter, colored by cognate/non-cognate ---
+    plt.figure(figsize=(7, 6))
+    for label, name, color in [(1, 'Cognate', 'steelblue'), (0, 'Non-cognate', 'firebrick')]:
+        mask = df['cognate_interaction'] == label
+        plt.scatter(df.loc[mask, 'PC1'], df.loc[mask, 'PC2'], label=name, alpha=0.6, color=color)
+    plt.xlabel(f"PC1 ({explained_variance_ratio[0]:.1%} variance)")
+    plt.ylabel(f"PC2 ({explained_variance_ratio[1]:.1%} variance)")
+    plt.title(f"PC1 vs PC2 by Cognate Status — {MODEL_NAME} ({project})")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(results_dir / f"{csv_stem}_pca_scatter.png", dpi=300)
+    plt.close()
 
-explained_variance_ratio = eigenvalues / eigenvalues.sum()
+    # --- 3. loadings bar chart: which metrics drive PC1 and PC2 ---
+    loadings = pd.DataFrame(eigenvectors[:, :2], index=metric_columns, columns=['PC1', 'PC2'])
+    loadings.to_csv(results_dir / f"{csv_stem}_pca_loadings.csv")
 
-# --- project pairs onto the top components ---
-pc_scores = X @ eigenvectors[:, :2]
-df['PC1'] = pc_scores[:, 0]
-df['PC2'] = pc_scores[:, 1]
-
-#silouhette score to determine k, number of clusters
-# for k in range(2, 8):
-#     km = KMeans(n_clusters=k, random_state=42, n_init=10).fit(pc_scores)
-#     score = silhouette_score(pc_scores, km.labels_)
-#     print(f"k={k}: silhouette={score:.3f}")
-
-
-
-# use however many components you want to retain (e.g., first 2-3, since PC1+PC2 = 87% variance)
-n_components = 2
-pc_scores = X @ eigenvectors[:, :n_components]
-
-# --- k-means clustering in PC space ---
-k = 2 
-kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
-cluster_labels = kmeans.fit_predict(pc_scores)
-
-df['cluster'] = cluster_labels
-
-# --- visualize clusters in PC1/PC2 space, colored by cluster and shaped by cognate status ---
-plt.figure(figsize=(7, 6))
-for c in range(k):
-    mask = df['cluster'] == c
-    plt.scatter(pc_scores[mask, 0], pc_scores[mask, 1], label=f'Cluster {c}', alpha=0.7)
-plt.xlabel("PC1")
-plt.ylabel("PC2")
-plt.legend()
-plt.title("Protein Pairs Clustered in PCA Space")
-plt.savefig(results_dir / "pca_clusters.png", dpi=300)
-plt.close()
-
-# print(df.groupby('cluster')['cognate_interaction'].value_counts(normalize=True))
-# print(df.groupby('cluster')['cognate_interaction'].value_counts())  # raw counts too
-
-# what actually distinguishes the two clusters?
-# print(df.groupby('cluster')[metric_columns].mean())
-# print(df['cognate_interaction'].value_counts(normalize=True))
-
-import numpy as np
-
-centroids = kmeans.cluster_centers_
-df['dist_to_centroid'] = [
-    np.linalg.norm(pc_scores[i] - centroids[df['cluster'].iloc[i]])
-    for i in range(len(df))
-]
-
-# most "typical" examples per cluster
-print(df.sort_values('dist_to_centroid').groupby('cluster').head(3)[['sample', 'cluster', 'cognate_interaction']])
-
-# the interesting misclassified cases
-print(df[(df['cluster'] == 0) & (df['cognate_interaction'] == 1)][['sample', 'cluster']])
-print(df[(df['cluster'] == 1) & (df['cognate_interaction'] == 0)][['sample', 'cluster']])
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
+    for ax, pc in zip(axes, ['PC1', 'PC2']):
+        ordered = loadings[pc].sort_values()
+        ax.barh(ordered.index, ordered.values, color='steelblue')
+        ax.axvline(0, color='black', linewidth=0.8)
+        ax.set_title(f"{pc} Loadings")
+        ax.set_xlabel("Loading")
+    plt.suptitle(f"Metric Loadings on Top 2 Components — {MODEL_NAME} ({project})")
+    plt.tight_layout()
+    plt.savefig(results_dir / f"{csv_stem}_pca_loadings.png", dpi=300)
+    plt.close()
