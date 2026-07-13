@@ -17,6 +17,9 @@ MODEL_NAME = "AF3"
 ID_COL = "sample"
 
 for df, csv_stem, project, sep, results_dir in iter_datasets():
+    lda_dir = results_dir / "lda"
+    lda_dir.mkdir(parents=True, exist_ok=True)
+
     # --- select metric columns ---
     metric_columns = [c for c in df.columns if c not in UNWANTED_COLUMNS]
 
@@ -51,7 +54,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
 
     # --- save numeric result ---
     scores_df = pd.DataFrame({'sample': data.index, 'lda_score': lda_scores, 'cv_lda_score': cv_scores})
-    scores_df.to_csv(results_dir / f"{csv_stem}_lda_scores.csv", index=False)
+    scores_df.to_csv(lda_dir / f"{csv_stem}_lda_scores.csv", index=False)
 
     # --- 1. in-sample vs. cross-validated AUC bar chart: the headline "looks good vs.
     # generalizes" comparison ---
@@ -66,7 +69,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     ax.set_ylim(0, 1.08)
     ax.set_title(f"LDA: In-sample vs. Cross-validated AUC\n{MODEL_NAME} ({project})")
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.08), frameon=False)
-    plt.savefig(results_dir / f"{csv_stem}_lda_auc_comparison.png", dpi=300, bbox_inches='tight')
+    plt.savefig(lda_dir / f"{csv_stem}_lda_auc_comparison.png", dpi=300, bbox_inches='tight')
     plt.close()
 
     # --- 2. ROC curve overlay: in-sample vs. cross-validated ---
@@ -82,5 +85,5 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     plt.title(f"LDA ROC: In-sample vs. Cross-validated — {MODEL_NAME} ({project})")
     plt.legend()
     plt.tight_layout()
-    plt.savefig(results_dir / f"{csv_stem}_lda_roc_comparison.png", dpi=300)
+    plt.savefig(lda_dir / f"{csv_stem}_lda_roc_comparison.png", dpi=300)
     plt.close()

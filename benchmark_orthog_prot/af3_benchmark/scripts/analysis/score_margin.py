@@ -43,7 +43,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     means = margin_df.mean()
     stds = margin_df.std()
 
-    barplot_dir = results_dir / "barplots"
+    barplot_dir = results_dir / "score_margin"
     barplot_dir.mkdir(parents=True, exist_ok=True)
 
     fig, ax = plt.subplots(figsize=(10, 6))

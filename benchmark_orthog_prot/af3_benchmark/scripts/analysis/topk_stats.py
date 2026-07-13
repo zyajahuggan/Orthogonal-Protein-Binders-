@@ -38,7 +38,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
 
     # --- boxplot: box+whiskers show the distribution, scattered points show every
     # individual cognate sample's rank, black diamonds show mean +/- standard deviation ---
-    boxplot_dir = results_dir / "boxplots"
+    boxplot_dir = results_dir / "ranking"
     boxplot_dir.mkdir(parents=True, exist_ok=True)
 
     fig, ax = plt.subplots(figsize=(10, 6))

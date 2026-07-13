@@ -14,6 +14,9 @@ MODEL_NAME = "AF3"
 ID_COL = "sample"
 
 for df, csv_stem, project, sep, results_dir in iter_datasets():
+    pca_dir = results_dir / "pca"
+    pca_dir.mkdir(parents=True, exist_ok=True)
+
     metric_columns = [c for c in df.columns if c not in UNWANTED_COLUMNS]
 
     # --- orient error-like metrics (lower-is-better -> higher-is-better) and standardize ---
@@ -46,7 +49,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
         'explained_variance_ratio': explained_variance_ratio,
         'cumulative_variance_ratio': np.cumsum(explained_variance_ratio),
     })
-    variance_df.to_csv(results_dir / f"{csv_stem}_pca_variance.csv", index=False)
+    variance_df.to_csv(pca_dir / f"{csv_stem}_pca_variance.csv", index=False)
     print(f"--- {project} ---")
     print(variance_df.to_string(index=False))
 
@@ -61,7 +64,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     plt.xticks(components)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(results_dir / f"{csv_stem}_pca_scree.png", dpi=300)
+    plt.savefig(pca_dir / f"{csv_stem}_pca_scree.png", dpi=300)
     plt.close()
 
     # --- 2. PC1 vs PC2 scatter, colored by cognate/non-cognate ---
@@ -74,12 +77,12 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     plt.title(f"PC1 vs PC2 by Cognate Status — {MODEL_NAME} ({project})")
     plt.legend()
     plt.tight_layout()
-    plt.savefig(results_dir / f"{csv_stem}_pca_scatter.png", dpi=300)
+    plt.savefig(pca_dir / f"{csv_stem}_pca_scatter.png", dpi=300)
     plt.close()
 
     # --- 3. loadings bar chart: which metrics drive PC1 and PC2 ---
     loadings = pd.DataFrame(eigenvectors[:, :2], index=metric_columns, columns=['PC1', 'PC2'])
-    loadings.to_csv(results_dir / f"{csv_stem}_pca_loadings.csv")
+    loadings.to_csv(pca_dir / f"{csv_stem}_pca_loadings.csv")
 
     fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
     for ax, pc in zip(axes, ['PC1', 'PC2']):
@@ -90,5 +93,5 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
         ax.set_xlabel("Loading")
     plt.suptitle(f"Metric Loadings on Top 2 Components — {MODEL_NAME} ({project})")
     plt.tight_layout()
-    plt.savefig(results_dir / f"{csv_stem}_pca_loadings.png", dpi=300)
+    plt.savefig(pca_dir / f"{csv_stem}_pca_loadings.png", dpi=300)
     plt.close()

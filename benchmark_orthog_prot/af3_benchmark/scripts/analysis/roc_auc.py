@@ -9,6 +9,9 @@ from pairing_utils import orient_scores, UNWANTED_COLUMNS, LOWER_IS_BETTER_COLUM
 MODEL_NAME = "AF3"
 
 for df, csv_stem, project, sep, results_dir in iter_datasets():
+    roc_auc_dir = results_dir / "roc_auc"
+    roc_auc_dir.mkdir(parents=True, exist_ok=True)
+
     # --- AUC leaderboard
     results = []
     for metric in df.columns:
@@ -19,17 +22,14 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
         results.append({'metric': metric, 'auc': auc})
 
     leaderboard = pd.DataFrame(results).sort_values('auc', ascending=False)
-    leaderboard.to_csv(results_dir / f"af3_auc_{project}_leaderboard.csv", index=False)
+    leaderboard.to_csv(roc_auc_dir / f"af3_auc_{project}_leaderboard.csv", index=False)
 
     # --- output dirs ---
-    roc_dir = results_dir / "roc_curves"
+    roc_dir = roc_auc_dir / "roc_curves"
     roc_dir.mkdir(parents=True, exist_ok=True)
 
-    youden_dir = results_dir / "youdens_j" / csv_stem
+    youden_dir = roc_auc_dir / "youdens_j" / csv_stem
     youden_dir.mkdir(parents=True, exist_ok=True)
-
-    barplot_dir = results_dir / "barplots"
-    barplot_dir.mkdir(parents=True, exist_ok=True)
 
     # --- merged loop: ROC plot + Youden's J, once per metric ---
     youden_results = []
@@ -73,5 +73,5 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     plt.title(f"AUC by Metric — {MODEL_NAME} ({project})")
     plt.gca().invert_yaxis()
     plt.tight_layout()
-    plt.savefig(barplot_dir / f"af3_auc_bar_{project}.png", dpi=300)
+    plt.savefig(roc_auc_dir / f"af3_auc_bar_{project}.png", dpi=300)
     plt.close()

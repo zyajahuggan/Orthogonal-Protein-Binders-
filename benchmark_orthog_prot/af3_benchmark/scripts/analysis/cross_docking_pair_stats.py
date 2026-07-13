@@ -47,7 +47,7 @@ for metric, rate in win_rate.items():
 
 # --- barplot: one bar per metric, height is the fraction of designs where both cognate
 # pairs outscored both non-cognate pairs, ordered best metric to worst ---
-barplot_dir = results_dir / "barplots"
+barplot_dir = results_dir / "pair_stats"
 barplot_dir.mkdir(parents=True, exist_ok=True)
 
 fig, ax = plt.subplots(figsize=(10, 6))
