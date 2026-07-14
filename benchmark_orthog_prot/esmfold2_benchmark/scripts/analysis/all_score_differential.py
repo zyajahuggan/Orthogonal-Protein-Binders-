@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pairing_utils import orient_scores, UNWANTED_COLUMNS, iter_datasets, find_non_cognate_indices
 
-MODEL_NAME = "AF3"
+MODEL_NAME = "ESMFold2"
 rng = np.random.default_rng(42)
 
 for df, csv_stem, project, sep, results_dir in iter_datasets():
@@ -37,7 +37,7 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
 
     # --- boxplot + jittered points: every individual cognate/non-cognate pairwise
     # difference per metric, standardized so scale doesn't distort the comparison ---
-    diff_df = pd.DataFrame(total_differences) 
+    diff_df = pd.DataFrame(total_differences)
 
     metric_order = diff_df.median().sort_values(ascending=False).index.tolist()
     diff_df = diff_df[metric_order]
@@ -72,5 +72,3 @@ for df, csv_stem, project, sep, results_dir in iter_datasets():
     plt.tight_layout()
     plt.savefig(barplot_dir / f"{csv_stem}_all_pairs_differential_barplot.png", dpi=300, bbox_inches='tight')
     plt.close()
-
-

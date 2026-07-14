@@ -6,7 +6,7 @@ per metric to see which metrics win by a little vs. win by a lot. Runs once per 
 import matplotlib.pyplot as plt
 from pairing_utils import find_non_cognate_indices, orient_scores, UNWANTED_COLUMNS, iter_datasets
 
-ID_COL = "sample"
+ID_COL = "job_name"
 
 for df, csv_stem, project, sep, results_dir in iter_datasets():
     non_cognate_indexes = find_non_cognate_indices(df, sep=sep)
