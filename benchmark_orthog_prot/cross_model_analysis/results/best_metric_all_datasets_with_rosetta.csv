@@ -1,0 +1,13 @@
+dataset,model,best_metric,auc
+DHD,AF3,chain_pair_pae_min_0_1,0.8541666666666666
+DHD,Boltz-2,ptm,0.9467592592592592
+DHD,Chai,ptm,0.7430555555555556
+DHD,ESMFold2,ipsae_score,0.9583333333333334
+DHD,RIAM,interface_sc,0.7430555555555556
+DHD,FastRelax,interface_interface_hbonds,0.7824797453703703
+COP,AF3,chain_pair_pae_min_0_1,0.7168367346938775
+COP,Boltz-2,ipsae_pdockq,0.7104591836734694
+COP,Chai,per_chain_pair_iptm_0_1,0.7142857142857143
+COP,ESMFold2,ipsae_lis,0.7385204081632653
+COP,RIAM,interface_interface_hbonds,0.7630739795918368
+COP,FastRelax,interface_dG_SASA_ratio,0.7709263392857143

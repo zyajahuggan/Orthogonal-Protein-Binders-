@@ -1,0 +1,5 @@
+spm,best_metric,median_differential,total_differential,n_comparisons
+af3,interface_dG_SASA_ratio,0.7907539061282736,39.03533400134394,56
+boltz,interface_sc,0.7976599466577137,40.946543928429264,56
+chai,interface_dG_SASA_ratio,0.7503509764176721,49.110471406536654,56
+esmfold2,interface_dG_SASA_ratio,0.8399562315460904,56.522054747789,56

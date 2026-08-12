@@ -1,0 +1,7 @@
+dataset,model_a,metric_a,model_b,metric_b,n_matched_pairs,n_a_total,n_b_total,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+dhd,AF3,ipsae_score,Boltz-2,ipsae_pdockq2,132,132,132,-0.875382555571903,775.0,2.241718123120863e-16,1.3450308738725177e-15
+dhd,AF3,ipsae_score,Chai,aggregate_score,132,132,132,0.0018054665296058925,3836.0,0.20911031874839525,1.0
+dhd,AF3,ipsae_score,ESMFold2,ipsae_score_d0chn,132,132,132,-0.36014983401051115,2194.0,6.181755410862167e-07,3.7090532465173e-06
+dhd,Boltz-2,ipsae_pdockq2,Chai,aggregate_score,132,132,132,1.2194193734479062,1442.0,2.17969298359149e-11,1.307815790154894e-10
+dhd,Boltz-2,ipsae_pdockq2,ESMFold2,ipsae_score_d0chn,132,132,132,0.45998241653327,3052.0,0.0023918661740205236,0.014351197044123142
+dhd,Chai,aggregate_score,ESMFold2,ipsae_score_d0chn,132,132,132,-0.9502796513006773,1709.0,1.1503197697158951e-09,6.901918618295371e-09

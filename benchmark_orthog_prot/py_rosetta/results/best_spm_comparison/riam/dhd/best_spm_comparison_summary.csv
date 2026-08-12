@@ -1,0 +1,5 @@
+spm,best_metric,median_differential,total_differential,n_comparisons
+af3,interface_interface_hbonds,0.8946208528384958,132.85119664651666,132
+boltz,interface_sc,0.7358141876217739,97.12747276607405,132
+chai,interface_sc,1.2826635985192651,162.0966122628722,132
+esmfold2,interface_hbond_percentage,1.2330598390514624,147.7250596726483,132

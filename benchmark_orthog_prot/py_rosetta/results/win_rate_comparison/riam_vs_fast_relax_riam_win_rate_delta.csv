@@ -1,0 +1,9 @@
+spm,dataset,native_best_metric,native_win_rate,riam_best_metric,riam_win_rate,fast_relax_riam_best_metric,fast_relax_riam_win_rate,riam_vs_native_delta,fast_relax_riam_vs_native_delta,fast_relax_riam_vs_riam_delta
+af3,dhd,chain_ptm_1,0.5333333333333333,binder_score,0.13333333333333333,interface_interface_hbonds,0.3333333333333333,-0.4,-0.2,0.19999999999999998
+af3,cop,chain_pair_pae_min_1_0,0.5,interface_hbond_percentage,0.5,interface_dG,0.6428571428571429,0.0,0.1428571428571429,0.1428571428571429
+esmfold2,dhd,ipsae_score,0.8,binder_score,0.3333333333333333,interface_hbond_percentage,0.4666666666666667,-0.46666666666666673,-0.33333333333333337,0.13333333333333336
+esmfold2,cop,ipsae_score_d0chn,0.6428571428571429,interface_interface_hbonds,0.6428571428571429,interface_dG,0.7142857142857143,0.0,0.0714285714285714,0.0714285714285714
+boltz,dhd,ipsae_pdockq,0.8,interface_delta_unsat_hbonds_percentage,0.2,interface_dG,0.26666666666666666,-0.6000000000000001,-0.5333333333333334,0.06666666666666665
+boltz,cop,ipsae_pdockq2,0.5,interface_sc,0.42857142857142855,interface_dG,0.6428571428571429,-0.07142857142857145,0.1428571428571429,0.21428571428571436
+chai,dhd,per_chain_pair_iptm_1_1,0.26666666666666666,interface_sc,0.3333333333333333,binder_score,0.4666666666666667,0.06666666666666665,0.2,0.13333333333333336
+chai,cop,iptm,0.6428571428571429,interface_sc,0.7142857142857143,interface_dG,0.6428571428571429,0.0714285714285714,0.0,-0.0714285714285714

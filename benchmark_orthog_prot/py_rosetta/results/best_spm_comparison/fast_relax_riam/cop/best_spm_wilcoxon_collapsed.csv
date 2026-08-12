@@ -1,0 +1,7 @@
+project,dataset,spm_a,metric_a,spm_b,metric_b,n_matched_pairs,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+fast_relax_riam,cop,af3,interface_dG_SASA_ratio,boltz,interface_sc,28,0.16302081393076207,160.0,0.33856552094221115,1.0
+fast_relax_riam,cop,af3,interface_dG_SASA_ratio,chai,interface_dG_SASA_ratio,28,0.19833342168019763,144.0,0.18578492105007172,1.0
+fast_relax_riam,cop,af3,interface_dG_SASA_ratio,esmfold2,interface_dG_SASA_ratio,28,-0.19392501588026378,150.0,0.23591722548007965,1.0
+fast_relax_riam,cop,boltz,interface_sc,chai,interface_dG_SASA_ratio,28,-0.23896429830469362,149.0,0.22697687149047852,1.0
+fast_relax_riam,cop,boltz,interface_sc,esmfold2,interface_dG_SASA_ratio,28,-0.46215003678180855,126.0,0.08145394921302795,0.4887236952781677
+fast_relax_riam,cop,chai,interface_dG_SASA_ratio,esmfold2,interface_dG_SASA_ratio,28,-0.33801474373850443,157.0,0.3052256628870964,1.0

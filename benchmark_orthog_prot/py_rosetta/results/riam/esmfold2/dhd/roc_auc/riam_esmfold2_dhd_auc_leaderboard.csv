@@ -1,0 +1,17 @@
+metric,auc
+interface_hbond_percentage,0.8287037037037037
+interface_dG_SASA_ratio,0.8240740740740741
+interface_sc,0.8171296296296297
+interface_dG,0.8078703703703703
+binder_score,0.8032407407407407
+interface_interface_hbonds,0.8032407407407407
+interface_packstat,0.6805555555555556
+interface_fraction,0.6215277777777778
+interface_dSASA,0.5601851851851851
+interface_delta_unsat_hbonds,0.5590277777777777
+interface_delta_unsat_hbonds_percentage,0.5405092592592593
+interface_loop_sc,0.46875
+interface_nres,0.4201388888888889
+surface_hydrophobicity,0.39814814814814814
+interface_hydrophobicity,0.38541666666666663
+interface_loop_sc_area,0.28125

@@ -1,8 +1,12 @@
-# Large, regenerable model outputs -- not suitable for git/GitHub
-benchmark_orthog_prot/af3_benchmark/outputs/
-benchmark_orthog_prot/boltz_benchmark/
-benchmark_orthog_prot/chai_benchmark/
-benchmark_orthog_prot/esmfold2_benchmark/
+# Large, regenerable model inputs/outputs -- not suitable for git/GitHub
+benchmark_orthog_prot/*/inputs/
+benchmark_orthog_prot/*/outputs/
+
+# Slurm job logs -- regenerable, not source
+benchmark_orthog_prot/*/logs/
+
+# PDB structure files -- regenerable model outputs, not source
+*.pdb
 
 # Python bytecode cache
 __pycache__/
@@ -11,3 +15,7 @@ __pycache__/
 # Claude Code local config/notes -- not project code
 .claude/
 CLAUDE.local.md
+
+# Editor cruft -- personal config/temp files, not source
+.vscode/
+*.swp

@@ -1,0 +1,13 @@
+dataset,model,best_metric,win_rate,n_win,n_combos
+DHD,AF3,chain_ptm_1,0.5333333333333333,8,15
+DHD,Boltz-2,ipsae_pdockq,0.8,12,15
+DHD,Chai,per_chain_pair_iptm_1_1,0.26666666666666666,4,15
+DHD,ESMFold2,ipsae_score,0.8,12,15
+DHD,RIAM,binder_score,0.2,12,60
+DHD,FastRelax,binder_score,0.31666666666666665,19,60
+COP,AF3,chain_pair_pae_min_1_0,0.5,7,14
+COP,Boltz-2,ipsae_pdockq2,0.5,7,14
+COP,Chai,iptm,0.6428571428571429,9,14
+COP,ESMFold2,ipsae_score_d0chn,0.6428571428571429,9,14
+COP,RIAM,interface_sc,0.5357142857142857,30,56
+COP,FastRelax,interface_dG,0.6607142857142857,37,56

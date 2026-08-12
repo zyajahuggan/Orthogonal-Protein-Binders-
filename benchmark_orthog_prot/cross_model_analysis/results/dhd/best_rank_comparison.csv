@@ -1,0 +1,5 @@
+model,best_metric,mean_rank,expected_random_rank
+AF3,fraction_disordered,4.0,12.0
+Boltz-2,iptm_0_1,2.1666666666666665,12.0
+Chai,ptm,7.0,12.0
+ESMFold2,inter_chain_pae,2.0,12.0

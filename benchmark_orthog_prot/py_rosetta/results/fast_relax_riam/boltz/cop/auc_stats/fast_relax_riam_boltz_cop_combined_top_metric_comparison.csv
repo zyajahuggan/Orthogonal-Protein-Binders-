@@ -1,0 +1,16 @@
+top_metric,compared_metric,auc_diff,ci_low,ci_high,significant
+interface_dG_SASA_ratio,interface_hydrophobicity,0.315953762755102,0.14858099489795915,0.48667091836734666,True
+interface_dG_SASA_ratio,interface_delta_unsat_hbonds,0.30598405612244906,0.10712691326530607,0.5044642857142856,True
+interface_dG_SASA_ratio,interface_delta_unsat_hbonds_percentage,0.2978836096938775,0.1071428571428572,0.48598533163265295,True
+interface_dG_SASA_ratio,surface_hydrophobicity,0.2890985331632653,0.06887755102040816,0.4993781887755101,True
+interface_dG_SASA_ratio,binder_score,0.25057971938775514,0.013345025510204039,0.4726243622448977,True
+interface_dG_SASA_ratio,interface_nres,0.2223204719387755,0.043351403061224404,0.40499043367346926,True
+interface_dG_SASA_ratio,interface_fraction,0.21769132653061224,0.06503507653061222,0.3622448979591837,True
+interface_dG_SASA_ratio,interface_dSASA,0.18663329081632654,0.00699936224489792,0.375,True
+interface_dG_SASA_ratio,interface_packstat,0.15652933673469385,-0.028077168367346996,0.3392857142857142,False
+interface_dG_SASA_ratio,interface_sc,0.08214891581632654,-0.03957270408163265,0.201530612244898,False
+interface_dG_SASA_ratio,interface_dG,0.07615911989795919,-0.045934311224489786,0.2021843112244897,False
+interface_dG_SASA_ratio,interface_hbond_percentage,0.06936033163265305,-0.11162308673469393,0.24239477040816307,False
+interface_dG_SASA_ratio,interface_interface_hbonds,0.003397959183673468,-0.15562818877551024,0.17413903061224478,False
+interface_dG_SASA_ratio,interface_loop_sc,,,,False
+interface_dG_SASA_ratio,interface_loop_sc_area,,,,False

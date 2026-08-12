@@ -1,0 +1,10 @@
+sequences:
+    - ENTITY_TYPE:
+        id: CHAIN_ID 
+        sequence: SEQUENCE      # only for protein, dna, rna
+    - ENTITY_TYPE: 
+        id: CHAIN_ID
+        sequence: SEQUENCE
+    
+
+    

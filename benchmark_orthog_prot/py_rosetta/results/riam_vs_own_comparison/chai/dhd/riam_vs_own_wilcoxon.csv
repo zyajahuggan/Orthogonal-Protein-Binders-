@@ -1,0 +1,10 @@
+spm,dataset,group_a,label_a,group_b,label_b,n_matched_pairs,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+chai,dhd,riam,"riam
+(interface_sc)",fast_relax_riam,"fast_relax_riam
+(interface_dG)",132,0.21704736677209255,3467.0,0.03624961210684272,0.10874883632052817
+chai,dhd,riam,"riam
+(interface_sc)",own,"chai
+(aggregate_score)",132,0.3563734026541078,2834.0,0.00041268822818894016,0.0012380646845668204
+chai,dhd,fast_relax_riam,"fast_relax_riam
+(interface_dG)",own,"chai
+(aggregate_score)",132,0.24397115891302026,3683.0,0.10881971978447437,0.3264591593534231

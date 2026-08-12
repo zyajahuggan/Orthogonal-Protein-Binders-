@@ -1,0 +1,7 @@
+model,best_metric,auc
+AF3,chain_pair_pae_min_0_1,0.8541666666666666
+Boltz-2,ptm,0.9467592592592592
+Chai,ptm,0.7430555555555556
+ESMFold2,ipsae_score,0.9583333333333334
+RIAM,interface_sc,0.7430555555555556
+FastRelax,interface_interface_hbonds,0.7824797453703703

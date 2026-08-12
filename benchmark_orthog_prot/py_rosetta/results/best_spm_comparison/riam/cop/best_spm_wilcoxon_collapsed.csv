@@ -1,0 +1,7 @@
+project,dataset,spm_a,metric_a,spm_b,metric_b,n_matched_pairs,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+riam,cop,af3,interface_sc,boltz,interface_hbond_percentage,28,-0.05304813799786291,160.0,0.33856552094221115,1.0
+riam,cop,af3,interface_sc,chai,interface_sc,28,-0.18425188453657587,137.0,0.13751810044050217,0.825108602643013
+riam,cop,af3,interface_sc,esmfold2,interface_sc,28,-0.2676643731081788,121.0,0.06281394511461258,0.3768836706876755
+riam,cop,boltz,interface_hbond_percentage,chai,interface_sc,28,0.2630710882176218,198.0,0.9196710959076881,1.0
+riam,cop,boltz,interface_hbond_percentage,esmfold2,interface_sc,28,-0.35477808457843013,192.0,0.813923291862011,1.0
+riam,cop,chai,interface_sc,esmfold2,interface_sc,28,0.11386383622398305,198.0,0.9196710959076881,1.0

@@ -1,0 +1,3 @@
+[submodule "benchmark_orthog_prot/IPSAE"]
+	path = benchmark_orthog_prot/IPSAE
+	url = https://github.com/DunbrackLab/IPSAE.git

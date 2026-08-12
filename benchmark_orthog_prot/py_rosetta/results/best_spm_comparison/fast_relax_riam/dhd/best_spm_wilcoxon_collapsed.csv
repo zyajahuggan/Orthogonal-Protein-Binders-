@@ -1,0 +1,7 @@
+project,dataset,spm_a,metric_a,spm_b,metric_b,n_matched_pairs,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+fast_relax_riam,dhd,af3,interface_hbond_percentage,boltz,interface_dG,6,0.19797965919975924,10.0,1.0,1.0
+fast_relax_riam,dhd,af3,interface_hbond_percentage,chai,interface_dG,6,-0.39873498735737467,9.0,0.84375,1.0
+fast_relax_riam,dhd,af3,interface_hbond_percentage,esmfold2,interface_hbond_percentage,6,-0.38301746018264893,2.0,0.09375,0.5625
+fast_relax_riam,dhd,boltz,interface_dG,chai,interface_dG,6,0.0012434938392107686,10.0,1.0,1.0
+fast_relax_riam,dhd,boltz,interface_dG,esmfold2,interface_hbond_percentage,6,-0.5908055683279444,5.0,0.3125,1.0
+fast_relax_riam,dhd,chai,interface_dG,esmfold2,interface_hbond_percentage,6,-0.37810662572193415,7.0,0.5625,1.0

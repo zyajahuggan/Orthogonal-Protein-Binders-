@@ -1,0 +1,10 @@
+spm,dataset,group_a,label_a,group_b,label_b,n_matched_pairs,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+esmfold2,dhd,riam,"riam
+(interface_hbond_percentage)",fast_relax_riam,"fast_relax_riam
+(interface_hbond_percentage)",6,-0.14252073705125662,8.0,0.6875,1.0
+esmfold2,dhd,riam,"riam
+(interface_hbond_percentage)",own,"esmfold2
+(ipsae_score_d0chn)",6,-0.8657533801941301,0.0,0.03125,0.09375
+esmfold2,dhd,fast_relax_riam,"fast_relax_riam
+(interface_hbond_percentage)",own,"esmfold2
+(ipsae_score_d0chn)",6,-1.202241635477802,3.0,0.15625,0.46875

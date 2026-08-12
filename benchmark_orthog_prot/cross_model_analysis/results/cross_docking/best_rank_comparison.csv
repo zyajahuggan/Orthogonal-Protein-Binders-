@@ -1,0 +1,5 @@
+model,best_metric,mean_rank
+AF3,chain_pair_pae_min_1_0,1.4285714285714286
+Boltz-2,complex_ipde,1.5
+Chai,iptm,1.3571428571428572
+ESMFold2,iptm,1.3928571428571428

@@ -1,0 +1,7 @@
+dataset,model_a,metric_a,model_b,metric_b,n_matched_pairs,n_a_total,n_b_total,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+cross_docking,AF3,ranking_score,Boltz-2,complex_iplddt,28,28,28,0.02565787100745763,197.0,0.9018996506929398,1.0
+cross_docking,AF3,ranking_score,Chai,per_chain_pair_iptm_0_1,28,28,28,-0.04944713776489018,154.0,0.27407141774892807,1.0
+cross_docking,AF3,ranking_score,ESMFold2,inter_chain_pae,28,28,28,0.03906307937205275,185.0,0.6947018131613731,1.0
+cross_docking,Boltz-2,complex_iplddt,Chai,per_chain_pair_iptm_0_1,28,28,28,-0.24588210598346671,116.0,0.04774715006351471,0.28648290038108826
+cross_docking,Boltz-2,complex_iplddt,ESMFold2,inter_chain_pae,28,28,28,0.04610522206105883,189.0,0.7621389999985695,1.0
+cross_docking,Chai,per_chain_pair_iptm_0_1,ESMFold2,inter_chain_pae,28,28,28,0.10865202552084366,88.0,0.007629185914993286,0.04577511548995972

@@ -1,0 +1,10 @@
+spm,dataset,group_a,label_a,group_b,label_b,n_matched_pairs,median_diff_a_minus_b,wilcoxon_stat,p_value,p_value_bonferroni
+boltz,cross_docking,riam,"riam
+(interface_hbond_percentage)",fast_relax_riam,"fast_relax_riam
+(interface_sc)",56,0.3098371536558148,623.0,0.1534387700374936,0.46031631011248075
+boltz,cross_docking,riam,"riam
+(interface_hbond_percentage)",own,"boltz
+(complex_iplddt)",56,0.33024502669126454,528.0,0.02763616271335223,0.08290848814005669
+boltz,cross_docking,fast_relax_riam,"fast_relax_riam
+(interface_sc)",own,"boltz
+(complex_iplddt)",56,0.2852780716184558,571.0,0.0640749247305605,0.19222477419168152

@@ -1,0 +1,5 @@
+model,best_metric,auc
+AF3,chain_pair_pae_min_0_1,0.7168367346938775
+Boltz-2,ipsae_pdockq,0.7104591836734694
+Chai,per_chain_pair_iptm_0_1,0.7142857142857143
+ESMFold2,ipsae_lis,0.7385204081632653

@@ -1,0 +1,5 @@
+model,best_metric,median_differential,total_differential,n_comparisons
+AF3,ipsae_score,0.30306646655256453,31.656343486159212,56
+Boltz-2,ipsae_score,0.2818877628792109,44.52789302359463,56
+Chai,per_chain_pair_iptm_0_1,0.33637006072203823,43.92193900402728,56
+ESMFold2,ipsae_pdockq,0.43159560212454523,44.24536722323661,56
